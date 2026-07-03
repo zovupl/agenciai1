@@ -216,6 +216,11 @@ footer{background:var(--ink);color:#9aa39a;margin-top:30px;padding:20px 24px;fon
 .uses{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:#3c443e;background:#eef5f0;border:1px solid #cfe3d6;border-radius:8px;padding:8px 12px;margin:12px 0 6px}
 .uses b{color:var(--green);font-family:'Archivo',sans-serif;font-weight:800;font-size:10px;letter-spacing:1.5px;text-transform:uppercase}
 .uses a{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500}
+/* TIME chip on exercise headers */
+.xt{display:inline-block;font-family:'Archivo',sans-serif;font-weight:800;font-size:10px;color:var(--orange);background:var(--os);border:1px solid #ffd8ad;padding:1px 8px;border-radius:99px;margin-left:8px;text-transform:none;letter-spacing:0}
+/* EXTENSION box (dla szybkich) */
+.rozsz{font-size:13.5px;color:#3c443e;background:#fff6ec;border:1px solid #ffd8ad;border-left:4px solid var(--orange);border-radius:8px;padding:10px 13px;margin:10px 0}
+.rozsz b{color:#b3560c}
 /* SCHEDULE (in side panel) */
 .sched{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
 .schday{font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--green);padding:9px 13px}
@@ -368,7 +373,7 @@ footer{background:var(--ink);color:#9aa39a;margin-top:30px;padding:20px 24px;fon
 <div class="inspire"><h3>Typy agentów — dobierz do zadania</h3><div class="igrid igrid3"><div class="icard"><strong>Reaktywny</strong><p>Prosta reakcja wg reguł. Np. odpowiedź na FAQ.</p></div><div class="icard"><strong>Deliberatywny</strong><p>Planuje wiele kroków. Np. raport, analiza ofert.</p></div><div class="icard"><strong>Hybrydowy</strong><p>Reakcja + planowanie. Np. obsługa klienta od A do Z.</p></div></div></div>
 <div class="hint"><b>Zasada doboru:</b> prosty, powtarzalny problem → agent reaktywny. Złożony, wieloetapowy → deliberatywny lub hybrydowy.</div>
 <div class="teo"><h3>Gdzie agenci realnie pomagają</h3><p>Najczęściej automatyzowane procesy — i trzy korzyści, które warto zapamiętać:</p><ul><li>Obsługa zapytań klientów i wstępne wyceny</li><li>Research, analizy i raporty</li><li>Szkice e-maili, ofert i treści</li><li>Umawianie spotkań i przypomnienia</li><li>Porządkowanie danych</li><li><b>Korzyści:</b> ⏱ oszczędność czasu · ✅ mniej błędów · 💡 lepsze decyzje</li></ul></div>
-<div class="sec">Ćwiczenie 1A · Mapa procesów Twojej firmy</div>
+<div class="sec">Ćwiczenie 1A · Mapa procesów Twojej firmy <span class='xt'>~20 min</span></div>
 <div class="uses">🔧 <b>Narzędzie:</b> Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> <span class="freetag">bezpłatne</span></div>
 <label class="step"><input type="checkbox" data-step><span>Skopiuj prompt poniżej i uzupełnij <b>[ROLA]</b> oraz <b>[BRANŻA]</b> (albo użyj gotowego przykładu pod promptem).</span></label><label class="step"><input type="checkbox" data-step><span>Wklej go do <b>Gemini</b> (gemini.google.com) i wyślij.</span></label><label class="step"><input type="checkbox" data-step><span>Przejrzyj listę zadań — przy każdym oceń korzyść i dobierz typ agenta.</span></label><label class="step"><input type="checkbox" data-step><span>Wybierz <b>JEDEN</b> proces (duża korzyść, małe ryzyko) — zapisz go w notatkach. To Twój projekt na całe szkolenie.</span></label>
 <div class="prom"><div class="pbar"><span>Prompt — Mapa procesów</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jestem <b>[TWOJA ROLA]</b> w <b>[BRANŻA / OPIS FIRMY w 1 zdaniu]</b>.
@@ -384,6 +389,17 @@ Pomóż mi znaleźć zadania, które może przejąć Agent AI.
 
 Pisz po polsku, konkretnie, w tabeli.</pre></div>
 <div class="prom ex"><div class="pbar"><span>📋 Przykład — użyj, jeśli nie chcesz opisywać swojej firmy</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Prowadzę firmę montującą pergole ogrodowe (aluminiowe pergole lamelowe z regulowanym dachem). Jeżdżę do klientów na pomiar na działkę, przygotowuję wyceny, montuję konstrukcje i serwisuję je po sezonie. Sam odpowiadam na wiadomości klientów na Instagramie i przez telefon, prowadzę też profil z postami i rolkami o zrealizowanych pergolach.</pre></div>
+<div class="sec">Ćwiczenie 1B · Agent vs chatbot — zobacz różnicę na żywo <span class='xt'>~10 min</span></div>
+<div class="uses">🔧 <b>Narzędzie:</b> Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> <span class="freetag">bezpłatne</span></div>
+<label class="step"><input type="checkbox" data-step><span>Wklej najpierw prompt „po chatbotowemu” (jedno pytanie) i zobacz odpowiedź.</span></label><label class="step"><input type="checkbox" data-step><span>Potem wklej prompt „po agentowemu” (cel + kroki) na ten sam temat.</span></label><label class="step"><input type="checkbox" data-step><span>Porównaj: który wynik jest bliżej gotowej pracy? Zanotuj różnicę.</span></label>
+<div class="prom"><div class="pbar"><span>Prompt A — po chatbotowemu (jedno pytanie)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Ile kosztuje pergola ogrodowa?</pre></div>
+<div class="prom"><div class="pbar"><span>Prompt B — po agentowemu (cel + kroki)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jesteś konsultantem firmy montującej pergole ogrodowe. Klient pyta o pergolę na taras 4×3 m.
+Wykonaj po kolei: 1) dopytaj o 3 kluczowe rzeczy potrzebne do wyceny, 2) zaproponuj konkretny wariant (model + dodatki), 3) podaj orientacyjny przedział cenowy, 4) zaproponuj następny krok (bezpłatny pomiar) i napisz krótki szkic odpowiedzi do klienta.</pre></div>
+<div class="sec">Ćwiczenie 1C · Dobierz typ agenta do swoich zadań <span class='xt'>~10 min</span></div>
+<label class="step"><input type="checkbox" data-step><span>Weź 3 zadania z mapy procesów (Ćwiczenie 1A).</span></label><label class="step"><input type="checkbox" data-step><span>Do każdego dopisz typ: reaktywny / deliberatywny / hybrydowy — i jedno zdanie uzasadnienia.</span></label><label class="step"><input type="checkbox" data-step><span>Sprawdź regułę: prosty i powtarzalny → reaktywny; wieloetapowy → deliberatywny/hybrydowy.</span></label>
+<div class="rozsz">🚀 <b>Rozszerzenie (dla szybkich):</b> poproś Gemini, aby zweryfikował Twój dobór typów agenta i zaproponował, co dałoby się połączyć w jednego agenta hybrydowego.</div>
+<div class="sec">Ćwiczenie 1D · Wybierz swój projekt na całe szkolenie <span class='xt'>~10 min</span></div>
+<label class="step"><input type="checkbox" data-step><span>Z całej mapy wybierz JEDEN proces (duża korzyść, małe ryzyko).</span></label><label class="step"><input type="checkbox" data-step><span>Zapisz jego CEL w jednym zdaniu („Agent, który…”).</span></label><label class="step"><input type="checkbox" data-step><span>To jest Twój projekt — wrócisz do niego w Modułach 2 i 3.</span></label>
 <div class="tgrid"><a class="tool" href="https://gemini.google.com" target="_blank"><b>Gemini<span class="freetag">bezpłatne</span></b><span class="tu">gemini.google.com</span><p>Bez kodu, konto Google</p></a><a class="tool" href="https://chatgpt.com" target="_blank"><b>ChatGPT<span class="freetag">bezpłatne</span></b><span class="tu">chatgpt.com</span><p>Plan bezpłatny wystarczy</p></a><a class="tool" href="https://claude.ai" target="_blank"><b>Claude<span class="freetag">bezpłatne</span></b><span class="tu">claude.ai</span><p>Plan bezpłatny wystarczy</p></a></div>
 <div class="notes"><textarea data-notes placeholder="Mój wybrany proces (projekt na całe szkolenie): …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
 </div></article>
@@ -397,7 +413,7 @@ Pisz po polsku, konkretnie, w tabeli.</pre></div>
 <div class="cwbody">
 <div class="teo"><h3>Zanim zbudujesz agenta — zaprojektuj go</h3><p>Każdy dobry agent ma pięć elementów. To one decydują o jakości — 80% wartości agenta powstaje tutaj, zanim cokolwiek zbudujesz.</p><ul><li><b>CEL</b> — po co istnieje (jedno zdanie)</li><li><b>ROLA</b> — kim jest i dla kogo pracuje</li><li><b>KONTEKST I WIEDZA</b> — co musi wiedzieć o firmie</li><li><b>ZASADY</b> — priorytety, ton, format odpowiedzi</li><li><b>GRANICE</b> — czego nie robi i kiedy woła człowieka</li></ul></div>
 <div class="teo"><h3>Instrukcja systemowa to „umowa o pracę” agenta</h3><p>Cztery zasady dobrej instrukcji:</p><ul><li>Pisz konkretnie: „odpowiadasz maksymalnie w 5 zdaniach”, nie „odpowiadaj krótko”</li><li>Dawaj przykłady dobrych odpowiedzi i opisz przypadki brzegowe</li><li>Zdefiniuj eskalację: kiedy i jak przekazać sprawę człowiekowi</li><li>Iteruj — żadna instrukcja nie jest dobra w pierwszej wersji</li></ul></div>
-<div class="sec">Ćwiczenie 2A · Wypełnij Kartę Agenta</div>
+<div class="sec">Ćwiczenie 2A · Wypełnij Kartę Agenta <span class='xt'>~15 min</span></div>
 <label class="step"><input type="checkbox" data-step><span>Skopiuj szablon Karty Agenta poniżej.</span></label><label class="step"><input type="checkbox" data-step><span>Wypełnij 5 pól dla procesu wybranego w Module 1 (wzoruj się na przykładzie).</span></label><label class="step"><input type="checkbox" data-step><span>Zapisz kartę w notatkach — za chwilę zamienisz ją w instrukcję.</span></label>
 <div class="prom ex"><div class="pbar"><span>📋 Szablon — Karta Agenta (skopiuj i wypełnij)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>KARTA AGENTA
 1. CEL (po co istnieje, 1 zdanie): …
@@ -411,9 +427,9 @@ Pisz po polsku, konkretnie, w tabeli.</pre></div>
 3. KONTEKST I WIEDZA: Montujemy aluminiowe pergole lamelowe (dach z regulowanych lameli). Cena orientacyjna od 1200 zł/m². Proces: pomiar na działce → wycena → montaż 1–2 dni → serwis posezonowy. Kolory RAL, dodatki: LED, ściany boczne, czujnik deszczu.
 4. ZASADY: Ton rzeczowy i konkretny. Max 5 zdań. Zawsze proponuj następny krok: bezpłatny pomiar lub wstępną wycenę.
 5. GRANICE: Nie podajesz sztywnej ceny końcowej bez pomiaru (tylko orientacyjną). Nie potwierdzasz terminu montażu bez właściciela. Reklamacje i serwis gwarancyjny → przekazujesz właścicielowi.</pre></div>
-<div class="sec">Ćwiczenie 2B · Generator instrukcji systemowej</div>
+<div class="sec">Ćwiczenie 2B · Generator instrukcji systemowej <span class='xt'>~15 min</span></div>
 <div class="uses">🔧 <b>Narzędzie:</b> Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> <span class="freetag">bezpłatne</span></div>
-<label class="step"><input type="checkbox" data-step><span>Skopiuj prompt „Generator instrukcji” poniżej.</span></label><label class="step"><input type="checkbox" data-step><span>Na jego końcu wklej swoją wypełnioną Kartę Agenta z ćwiczenia 2A.</span></label><label class="step"><input type="checkbox" data-step><span>Wyślij do Gemini / ChatGPT / Claude → dostaniesz gotową instrukcję.</span></label><label class="step"><input type="checkbox" data-step><span>Przetestuj ją na 3 przykładowych zapytaniach klienta i zapisz w notatkach — użyjesz jej w Module 3.</span></label>
+<label class="step"><input type="checkbox" data-step><span>Skopiuj prompt „Generator instrukcji” poniżej.</span></label><label class="step"><input type="checkbox" data-step><span>Na jego końcu wklej swoją wypełnioną Kartę Agenta z ćwiczenia 2A.</span></label><label class="step"><input type="checkbox" data-step><span>Wyślij do Gemini → dostaniesz gotową instrukcję systemową.</span></label><label class="step"><input type="checkbox" data-step><span>Przeczytaj ją i zapisz w notatkach — użyjesz jej w Module 3.</span></label>
 <div class="prom"><div class="pbar"><span>Prompt — Generator instrukcji</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jesteś ekspertem od projektowania agentów AI. Na podstawie mojej Karty Agenta napisz gotową INSTRUKCJĘ SYSTEMOWĄ (do wklejenia w Gemini Gems / Custom GPT / Claude).
 
 Instrukcja ma zawierać sekcje: ROLA, CEL, KONTEKST I WIEDZA, ZASADY DZIAŁANIA, OGRANICZENIA I ESKALACJA, FORMAT ODPOWIEDZI.
@@ -421,7 +437,16 @@ Pisz w 2. osobie („Jesteś…”, „Odpowiadasz…”), konkretnie i jednozna
 
 Moja Karta Agenta:
 <b>[WKLEJ WYPEŁNIONĄ KARTĘ Z ĆWICZENIA 2A]</b></pre></div>
-<div class="notes"><textarea data-notes placeholder="Moja gotowa instrukcja systemowa (do Modułu 3): …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
+<div class="sec">Ćwiczenie 2C · Przetestuj instrukcję na 3 zapytaniach <span class='xt'>~15 min</span></div>
+<div class="uses">🔧 <b>Narzędzie:</b> Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> <span class="freetag">bezpłatne</span></div>
+<label class="step"><input type="checkbox" data-step><span>W nowej rozmowie wklej najpierw swoją instrukcję systemową jako pierwszą wiadomość.</span></label><label class="step"><input type="checkbox" data-step><span>Zadaj 3 przykładowe pytania klienta (użyj gotowych poniżej albo swoich).</span></label><label class="step"><input type="checkbox" data-step><span>Oceń odpowiedzi: czy zgodne z zasadami? czy trzyma granice? gdzie „zgaduje”?</span></label><label class="step"><input type="checkbox" data-step><span>Dopisz w instrukcji 1–2 poprawki tam, gdzie było słabo.</span></label>
+<div class="prom ex"><div class="pbar"><span>📋 3 przykładowe pytania testowe (pergole)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>1. „Chcę pergolę na taras 5×3 m, ile zapłacę?”
+2. „Czy montujecie zimą i jak szybko?”
+3. „Dacie mi 30% rabatu, bo widziałem taniej u konkurencji?”</pre></div>
+<div class="sec">Ćwiczenie 2D · Granice i eskalacja <span class='xt'>~10 min</span></div>
+<label class="step"><input type="checkbox" data-step><span>Wypisz 3 sytuacje, w których agent NIE powinien odpowiadać sam (np. reklamacja, indywidualny rabat, termin montażu).</span></label><label class="step"><input type="checkbox" data-step><span>Dla każdej dopisz zdanie eskalacji („W tej sprawie przekażę Cię do właściciela…”).</span></label><label class="step"><input type="checkbox" data-step><span>Wklej te reguły do sekcji OGRANICZENIA I ESKALACJA swojej instrukcji.</span></label>
+<div class="rozsz">🚀 <b>Rozszerzenie (dla szybkich):</b> poproś Gemini: „Znajdź 5 sytuacji brzegowych, w których moja instrukcja może zawieść, i zaproponuj poprawki.” Wklej swoją instrukcję.</div>
+<div class="notes"><textarea data-notes placeholder="Moja gotowa instrukcja systemowa + poprawki po testach (do Modułu 3): …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
 </div></article>
 <div class="tabs tabs-bottom" role="tablist"><button class="tab" data-panel="p1"><span class="tn">Moduł 1</span><span class="tk">Czym są Agenci AI</span><span class="th">Teoria + mapa procesów</span></button><button class="tab" data-panel="p2"><span class="tn">Moduł 2</span><span class="tk">Projektowanie agenta</span><span class="th">Karta + instrukcja</span></button><button class="tab" data-panel="p3"><span class="tn">Moduł 3</span><span class="tk">Budowa agenta</span><span class="th">Gemini Gems (bezpłatnie)</span></button><button class="tab" data-panel="p4"><span class="tn">Moduł 4</span><span class="tk">Praca indywidualna</span><span class="th">Research + decyzje</span></button></div>
 </div>
@@ -433,7 +458,7 @@ Moja Karta Agenta:
 <div class="cwbody">
 <div class="teo"><h3>Narzędzie bazowe: Gemini Gems <span class='freetag'>bezpłatne</span></h3><p>Budujemy w <b>Gemini Gems</b> — wystarczy konto Google, bez żadnych opłat. Zasada budowy jest wszędzie taka sama, więc później przeniesiesz agenta gdzie chcesz.</p><ul><li><b>Gemini Gems</b> — bezpłatne, konto Google (używamy na szkoleniu)</li><li>Custom GPT — wymaga płatnego ChatGPT Plus</li><li>Projekty w Claude — pełnia w planie Pro</li></ul></div>
 <div class="teo"><h3>Kolejność budowy — zapamiętaj</h3><p>Ten sam porządek działa dla każdego narzędzia:</p><ul><li>1. Cel i zadania</li><li>2. Instrukcja i wiedza</li><li>3. Testowanie</li><li>4. Optymalizacja</li><li>5. Wdrożenie</li></ul></div>
-<div class="sec">Ćwiczenie 3A · Zbuduj Gema krok po kroku</div>
+<div class="sec">Ćwiczenie 3A · Zbuduj Gema krok po kroku <span class='xt'>~20 min</span></div>
 <div class="uses">🔧 <b>Narzędzie:</b> Gemini Gems — <a href="https://gemini.google.com/gems/view" target="_blank">gemini.google.com/gems/view</a> <span class="freetag">bezpłatne</span></div>
 <label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://gemini.google.com/gems/view' target='_blank'>gemini.google.com/gems/view</a> i zaloguj się kontem Google (bezpłatnie).</span></label><label class="step"><input type="checkbox" data-step><span>Kliknij <b>Nowy Gem</b> (New Gem), aby utworzyć agenta.</span></label><label class="step"><input type="checkbox" data-step><span>W polu <b>Instrukcje</b> (Instructions) wklej swoją instrukcję systemową z Modułu 2.</span></label><label class="step"><input type="checkbox" data-step><span>W polu wiedzy / w instrukcji wklej informacje o firmie (użyj przykładowej wiedzy poniżej, jeśli nie masz własnej).</span></label><label class="step"><input type="checkbox" data-step><span>Kliknij <b>Save</b> → przetestuj agenta w podglądzie po prawej stronie.</span></label>
 <div class="prom ex"><div class="pbar"><span>📋 Przykładowa wiedza — wklej, jeśli nie masz własnej</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>FAQ — pergole ogrodowe:
@@ -443,9 +468,9 @@ Moja Karta Agenta:
 - Kolory: dowolny RAL (antracyt najpopularniejszy).
 - Dodatki: oświetlenie LED, ściany boczne, zasłony, czujnik deszczu.
 - Gwarancja na konstrukcję oraz serwis posezonowy.</pre></div>
-<div class="sec">Ćwiczenie 3B · Testuj jak klient, nie jak autor</div>
+<div class="sec">Ćwiczenie 3B · Testuj jak klient, nie jak autor <span class='xt'>~15 min</span></div>
 <div class="uses">🔧 <b>Narzędzie:</b> Twój Gem w Gemini — <a href="https://gemini.google.com/gems/view" target="_blank">gemini.google.com/gems/view</a> <span class="freetag">bezpłatne</span></div>
-<label class="step"><input type="checkbox" data-step><span>Skopiuj prompt „Tester agenta” i wygeneruj 6 pytań (2 typowe, 2 trudne, 2 podchwytliwe).</span></label><label class="step"><input type="checkbox" data-step><span>Zadaj je swojemu Gemowi po kolei.</span></label><label class="step"><input type="checkbox" data-step><span>Sprawdź: czy nie zmyśla? czy trzyma granice (np. rabaty)?</span></label><label class="step"><input type="checkbox" data-step><span>Po każdej rundzie wprowadź <b>jedną</b> poprawkę w instrukcji → testuj ponownie.</span></label>
+<label class="step"><input type="checkbox" data-step><span>Skopiuj prompt „Tester agenta” i wygeneruj 6 pytań (2 typowe, 2 trudne, 2 podchwytliwe).</span></label><label class="step"><input type="checkbox" data-step><span>Zadaj je swojemu Gemowi po kolei.</span></label><label class="step"><input type="checkbox" data-step><span>Sprawdź: czy nie zmyśla? czy trzyma granice (np. rabaty)?</span></label><label class="step"><input type="checkbox" data-step><span>Zapisz, które odpowiedzi były słabe — poprawisz je w ćwiczeniu 3C.</span></label>
 <div class="prom"><div class="pbar"><span>Prompt — Tester agenta</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Wciel się w wymagającego klienta mojego agenta i wygeneruj 6 pytań testowych:
 - 2 typowe (codzienne pytania klienta)
 - 2 trudne (nietypowe sytuacje, szczegóły)
@@ -453,6 +478,12 @@ Moja Karta Agenta:
 
 Do każdego pytania dopisz, jakiej dobrej odpowiedzi oczekuję.
 Kontekst agenta: <b>[KRÓTKI OPIS TWOJEGO AGENTA]</b></pre></div>
+<div class="sec">Ćwiczenie 3C · Optymalizuj — 2 rundy poprawek <span class='xt'>~15 min</span></div>
+<div class="uses">🔧 <b>Narzędzie:</b> Gemini Gems — <a href="https://gemini.google.com/gems/view" target="_blank">gemini.google.com/gems/view</a> <span class="freetag">bezpłatne</span></div>
+<label class="step"><input type="checkbox" data-step><span><b>Runda 1:</b> wprowadź w instrukcji Gema JEDNĄ poprawkę (najsłabsza odpowiedź z testu) → zapisz → przetestuj to samo pytanie ponownie.</span></label><label class="step"><input type="checkbox" data-step><span><b>Runda 2:</b> popraw kolejną słabość (np. za długie odpowiedzi, brak propozycji pomiaru) → zapisz → przetestuj.</span></label><label class="step"><input type="checkbox" data-step><span>Zasada: jedna zmiana → jeden test. Tak widzisz, co naprawdę pomaga.</span></label>
+<div class="rozsz">🚀 <b>Rozszerzenie (dla szybkich):</b> dodaj do wiedzy Gema drugi dokument (np. cennik dodatków) i sprawdź, czy odpowiedzi stały się konkretniejsze.</div>
+<div class="sec">Ćwiczenie 3D · Dokończ i zapisz swojego agenta <span class='xt'>~5 min</span></div>
+<label class="step"><input type="checkbox" data-step><span>Nadaj Gemowi nazwę i krótki opis (np. „Konsultant Pergole — wyceny i pomiary”).</span></label><label class="step"><input type="checkbox" data-step><span>Zapisz Gema i sprawdź, że pojawia się na liście Twoich Gemów.</span></label><label class="step"><input type="checkbox" data-step><span>Wklej nazwę agenta w notatki — to Twój gotowy efekt Dnia 1.</span></label>
 <div class="hint"><b>Cel Modułu 3:</b> wychodzisz z działającym agentem, który poprawnie odpowiada na typowe pytania i nie „wychodzi z roli”.</div>
 <div class="tgrid"><a class="tool" href="https://gemini.google.com/gems/view" target="_blank"><b>Gemini Gems<span class="freetag">bezpłatne</span></b><span class="tu">gemini.google.com/gems/view</span><p>Budujemy tutaj — konto Google</p></a><a class="tool" href="https://accounts.google.com" target="_blank"><b>Google (konto)<span class="freetag">bezpłatne</span></b><span class="tu">accounts.google.com</span><p>Załóż bezpłatnie, jeśli nie masz</p></a></div>
 <div class="notes"><textarea data-notes placeholder="Nazwa mojego Gema · co poprawiłem po testach: …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
@@ -466,13 +497,13 @@ Kontekst agenta: <b>[KRÓTKI OPIS TWOJEGO AGENTA]</b></pre></div>
 <p class="cwgoal"><b>Cel:</b> Uruchomisz 4 bezpłatne narzędzia-agentów do codziennej pracy: research, analiza źródeł, wsparcie decyzji i administracja.</p>
 <div class="cwbody">
 <div class="teo"><h3>Cztery zastosowania na co dzień</h3><p>Każde z tych narzędzi jest bezpłatne i gotowe do użycia od zaraz:</p><ul><li><b>NotebookLM</b> — agent-researcher: wrzucasz źródła, dostajesz analizy oparte wyłącznie na nich</li><li><b>Perplexity</b> — szybki research rynku z podanymi źródłami</li><li><b>Wsparcie decyzyjne</b> — agent-doradca: argumenty za/przeciw, ryzyka, rekomendacja</li><li><b>Automatyzacja administracji</b> — szkice maili, plan tygodnia, checklisty</li></ul></div>
-<div class="sec">Ćwiczenie 4A · Research z Perplexity</div>
+<div class="sec">Ćwiczenie 4A · Research z Perplexity <span class='xt'>~15 min</span></div>
 <div class="uses">🔧 <b>Narzędzie:</b> Perplexity — <a href="https://perplexity.ai" target="_blank">perplexity.ai</a> <span class="freetag">bezpłatne</span></div>
 <label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://perplexity.ai' target='_blank'>perplexity.ai</a> (działa też bez logowania).</span></label><label class="step"><input type="checkbox" data-step><span>Wklej prompt research i wpisz temat ze swojej branży (np. „trendy w pergolach ogrodowych 2026”, „czego szukają klienci pergoli w Google”).</span></label><label class="step"><input type="checkbox" data-step><span>Sprawdź źródła pod odpowiedzią — zaznacz, co wymaga weryfikacji.</span></label>
 <div class="prom"><div class="pbar"><span>Prompt — Szybki research</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Zrób szybki research na temat: <b>[TEMAT / PYTANIE — np. trendy w pergolach ogrodowych 2026]</b>.
 Podaj: 5 kluczowych faktów, 3 wnioski praktyczne dla mojej firmy i wskaż źródła.
 Zaznacz, co wymaga dodatkowej weryfikacji.</pre></div>
-<div class="sec">Ćwiczenie 4B · Analiza źródeł w NotebookLM</div>
+<div class="sec">Ćwiczenie 4B · Analiza źródeł w NotebookLM <span class='xt'>~15 min</span></div>
 <div class="uses">🔧 <b>Narzędzie:</b> NotebookLM — <a href="https://notebooklm.google.com" target="_blank">notebooklm.google.com</a> <span class="freetag">bezpłatne</span></div>
 <label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://notebooklm.google.com' target='_blank'>notebooklm.google.com</a> (konto Google, bezpłatnie).</span></label><label class="step"><input type="checkbox" data-step><span>Kliknij <b>Nowy</b> (New) → dodaj źródło: wklej tekst (użyj przykładu poniżej) albo wgraj własny cennik/ofertę (PDF).</span></label><label class="step"><input type="checkbox" data-step><span>Zadaj pytania do źródła (np. „ile kosztuje pergola premium 4x3 m z LED?”) — NotebookLM odpowiada wyłącznie na podstawie źródła (mniej halucynacji).</span></label>
 <div class="prom ex"><div class="pbar"><span>📋 Przykładowe źródło — wklej do NotebookLM</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Cennik i oferta — pergole ogrodowe.
@@ -483,7 +514,7 @@ Zaznacz, co wymaga dodatkowej weryfikacji.</pre></div>
 - Region montażu: do 100 km od siedziby. Dalej — dojazd wyceniany indywidualnie.
 - Czas realizacji w sezonie: 3–5 tygodni od podpisania umowy.
 - Gwarancja: 5 lat na konstrukcję, 2 lata na elektronikę.</pre></div>
-<div class="sec">Ćwiczenie 4C · Wsparcie decyzji i administracja</div>
+<div class="sec">Ćwiczenie 4C · Wsparcie decyzji i administracja <span class='xt'>~20 min</span></div>
 <div class="uses">🔧 <b>Narzędzie:</b> Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> <span class="freetag">bezpłatne</span></div>
 <label class="step"><input type="checkbox" data-step><span>Użyj promptu „Doradca” do realnego dylematu w firmie (albo przykładu poniżej).</span></label><label class="step"><input type="checkbox" data-step><span>Użyj promptu „Administracja”, aby wygenerować mail po pomiarze, plan tygodnia lub opis posta na Instagram.</span></label>
 <div class="prom"><div class="pbar"><span>Prompt — Doradca (wsparcie decyzji)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jesteś doradcą biznesowym. Mam decyzję: <b>[OPISZ DECYZJĘ / DYLEMAT]</b>.
@@ -494,6 +525,12 @@ Przedstaw: argumenty ZA, argumenty PRZECIW, 3 główne ryzyka i rekomendację wa
 3) pomysł na opis posta na Instagram o zrealizowanej pergoli (bez podawania cen, z zachętą do pomiaru).
 Po polsku, zwięźle, gotowe do użycia.</pre></div>
 <div class="prom ex"><div class="pbar"><span>📋 Przykładowy dylemat do promptu „Doradca”</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Czy wprowadzić bezpłatny pomiar w promieniu 100 km? Dojazd kosztuje mnie czas i paliwo, ale klienci częściej decydują się po pomiarze na miejscu. Średnia wartość realizacji to ok. 25 000 zł.</pre></div>
+<div class="sec">Ćwiczenie 4D · Wybierz narzędzie i zaplanuj wdrożenie <span class='xt'>~15 min</span></div>
+<div class="uses">🔧 <b>Narzędzie:</b> Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> <span class="freetag">bezpłatne</span></div>
+<label class="step"><input type="checkbox" data-step><span>Porównaj narzędzia z dziś (Twój Gem, NotebookLM, Perplexity) — które da Ci największą korzyść w tym tygodniu?</span></label><label class="step"><input type="checkbox" data-step><span>Wybierz JEDNO i zapisz pierwszy krok wdrożenia (np. „udostępnię Gema do obsługi zapytań z Instagrama”).</span></label><label class="step"><input type="checkbox" data-step><span>Użyj promptu poniżej, aby dostać konkretny 7-dniowy plan wdrożenia.</span></label>
+<div class="prom"><div class="pbar"><span>Prompt — 7-dniowy plan wdrożenia</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jestem właścicielem firmy montującej pergole ogrodowe. Chcę wdrożyć w pracy: <b>[NAZWA NARZĘDZIA/AGENTA]</b> do <b>[ZADANIE]</b>.
+Przygotuj prosty 7-dniowy plan wdrożenia: co robię każdego dnia (max 30 min dziennie), na co uważać i jak sprawdzić, że to działa.</pre></div>
+<div class="rozsz">🚀 <b>Rozszerzenie (dla szybkich):</b> poproś Gemini o 3 pomysły na rolki na Instagram pokazujące, jak Twój agent pomaga klientom szybciej dobrać pergolę.</div>
 <div class="teo"><h3>Po dzisiejszym dniu wiesz i umiesz</h3><p>Podsumowanie Dnia 1:</p><ul><li>Wiesz, czym agent różni się od chatbota</li><li>Umiesz dobrać typ agenta do zadania</li><li>Masz Kartę Agenta, instrukcję systemową i działającego agenta w Gemini Gems</li><li><b>Jutro:</b> agenci w procesach firmy, integracje Make i Zapier, bezpieczeństwo oraz projekt końcowy. Do zobaczenia o 09:00!</li></ul></div>
 <div class="tgrid"><a class="tool" href="https://notebooklm.google.com" target="_blank"><b>NotebookLM<span class="freetag">bezpłatne</span></b><span class="tu">notebooklm.google.com</span><p>Analiza Twoich źródeł</p></a><a class="tool" href="https://perplexity.ai" target="_blank"><b>Perplexity<span class="freetag">bezpłatne</span></b><span class="tu">perplexity.ai</span><p>Research ze źródłami</p></a><a class="tool" href="https://gemini.google.com" target="_blank"><b>Gemini<span class="freetag">bezpłatne</span></b><span class="tu">gemini.google.com</span><p>Doradca, administracja</p></a><a class="tool" href="https://claude.ai" target="_blank"><b>Claude<span class="freetag">bezpłatne</span></b><span class="tu">claude.ai</span><p>Dłuższe analizy tekstu</p></a></div>
 <div class="notes"><textarea data-notes placeholder="Które narzędzie wdrożę u siebie w pierwszej kolejności: …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
