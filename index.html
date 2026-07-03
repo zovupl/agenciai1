@@ -188,108 +188,138 @@ footer{background:var(--ink);color:#9aa39a;margin-top:30px;padding:20px 24px;fon
   .qOpts{grid-template-columns:1fr}
 }
 
-/* SCHEDULE */
-.sched{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:20px}
-.schday{font-family:'Archivo',sans-serif;font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--green);padding:11px 18px;display:flex;justify-content:space-between;align-items:center}
-.schday .d{color:#bfe0cd;font-weight:700;font-size:12px;letter-spacing:.5px}
-.schrow{display:grid;grid-template-columns:104px 1fr 62px;gap:12px;align-items:center;padding:11px 18px;border-bottom:1px solid #f0ece4}
+/* LOGO */
+.logopill{background:#fff;border-radius:9px;padding:6px 11px;display:inline-flex;align-items:center}
+.tl2{height:32px;display:block}
+/* SECOND SIDE BUTTON (Harmonogram) */
+#gBtn{top:41%}
+.hBtn{position:fixed;right:0;top:59%;transform:translateY(-50%);z-index:90;background:var(--orange);color:#1a1206;border:none;cursor:pointer;border-radius:10px 0 0 10px;padding:14px 10px;display:flex;flex-direction:column;align-items:center;gap:6px;box-shadow:-3px 0 12px rgba(0,0,0,.15);transition:background .15s}
+.hBtn:hover{background:#ff9226}
+.hBtn svg{width:20px;height:20px;fill:#1a1206}
+.hBtn span{font-family:'Archivo',sans-serif;font-weight:800;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;writing-mode:vertical-rl}
+/* THEORY */
+.teo{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:12px;padding:15px 19px;margin:13px 0}
+.teo h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;color:var(--green);margin-bottom:7px;letter-spacing:.3px}
+.teo p{font-size:14.5px;color:#3c443e;margin:6px 0}
+.teo ul{margin:7px 0 3px;padding-left:19px}
+.teo li{font-size:14.5px;color:#3c443e;margin:4px 0}
+.teo b{color:var(--ink)}
+.igrid3{grid-template-columns:1fr 1fr 1fr}
+@media(max-width:600px){.igrid3{grid-template-columns:1fr}}
+/* EXAMPLE block (green bar, copyable) */
+.prom.ex .pbar{background:#123a22;color:#bfe0cd}
+.prom.ex pre{background:#0e2a19}
+/* FREE tag */
+.freetag{display:inline-block;font-family:'Archivo',sans-serif;font-weight:800;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--done);padding:2px 7px;border-radius:99px;margin-left:6px;vertical-align:middle}
+.paidtag{background:#b98a3e}
+/* SCHEDULE (in side panel) */
+.sched{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.schday{font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--green);padding:9px 13px}
+.schday .d{display:block;color:#bfe0cd;font-weight:700;font-size:10px;margin-top:2px}
+.schrow{display:grid;grid-template-columns:74px 1fr 40px;gap:8px;align-items:center;padding:8px 13px;border-bottom:1px solid #f0ece4}
 .schrow:last-child{border-bottom:none}
-.schrow .tm{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--ink);font-weight:500}
-.schrow .nm{font-size:14.5px;color:var(--text)}
+.schrow .tm{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink)}
+.schrow .nm{font-size:12.5px;color:var(--text)}
 .schrow .nm b{font-weight:700}
-.schrow .du{font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;color:var(--muted);text-align:right}
-.schrow.br{background:#fbfaf6}
-.schrow.br .nm{color:var(--muted);font-size:13px}
-.schrow.br .du{color:#b98a3e}
-.schrow.ev{background:var(--os)}
-.schrow.ev .nm b{color:#b3560c}
-.schnow{margin:0 0 18px;font-size:13.5px;color:var(--muted);background:#fbfaf6;border:1px dashed #d8d3c4;border-radius:8px;padding:9px 13px}
+.schrow .du{font-family:'Archivo',sans-serif;font-weight:700;font-size:10px;color:var(--muted);text-align:right}
+.schrow.br{background:#fbfaf6}.schrow.br .nm{color:var(--muted);font-size:11.5px}
+.schrow.ev{background:var(--os)}.schrow.ev .nm b{color:#b3560c}
+.schnow{font-size:12px;color:var(--muted);background:#fbfaf6;border:1px dashed #d8d3c4;border-radius:8px;padding:8px 11px;margin-bottom:12px}
 .schnow b{color:var(--green)}
-/* TEST CALLOUT */
-.tcard{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
-@media(max-width:600px){.tcard{grid-template-columns:1fr}}
-.tc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;border-left:5px solid var(--orange);text-decoration:none;display:block;transition:border-color .15s}
-.tc:hover{border-color:var(--orange)}
-.tc.post{border-left-color:var(--green)}
-.tc .tcl{font-family:'Archivo',sans-serif;font-weight:800;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--orange)}
-.tc.post .tcl{color:var(--green)}
-.tc h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:16px;color:var(--ink);margin:3px 0 4px}
-.tc p{font-size:12.5px;color:var(--muted)}
-.daybadge{background:var(--orange)!important;color:#1a1206!important}
 
 </style>
 </head>
 <body>
 
-<!-- GLOSSARY BUTTON -->
+<!-- SIDE BUTTONS -->
 <button class="gBtn" id="gBtn" aria-label="Słownik i Test">
 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
 <span>Słownik</span>
 </button>
+<button class="hBtn" id="hBtn" aria-label="Harmonogram">
+<svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+<span>Harmonogram</span>
+</button>
 
-<!-- GLOSSARY PANEL -->
+<!-- SIDE PANEL -->
 <div class="gPanel" id="gPanel">
 <div class="gPanelHead" style="position:relative">
   <div class="gTabRow">
     <button class="gTabBtn on" data-gtab="slownik">📖 Słownik</button>
-    <button class="gTabBtn" data-gtab="test">⚡ Szybki Test</button>
+    <button class="gTabBtn" data-gtab="test">⚡ Test</button>
+    <button class="gTabBtn" data-gtab="harmonogram">🗓 Plan</button>
   </div>
   <button class="gClose" id="gClose">×</button>
 </div>
 <div class="gContent on" id="gc-slownik">
 <div class="gBody">
-<div class="gSrchWrap">
-  <input type="search" id="gSearch" placeholder="Szukaj… np. Agent, RAG, trigger" autocomplete="off">
-</div>
-<div class="gNoRes" id="gNoRes">Brak wyników dla „<span id="gQ"></span>"</div>
+<div class="gSrchWrap"><input type="search" id="gSearch" placeholder="Szukaj… np. Agent, Gems, granice" autocomplete="off"></div>
+<div class="gNoRes" id="gNoRes">Brak wyników dla „<span id="gQ"></span>”</div>
 <div class="gSec">Podstawy — Agenci AI</div>
-<div class="gItem"><strong>Agent AI</strong><span class="gEn">AI Agent</span><p>Program, który autonomicznie realizuje cel: planuje kroki, podejmuje decyzje i wykonuje zadania, korzystając z dostępnych narzędzi. Więcej niż chatbot.</p></div>
-<div class="gItem"><strong>Chatbot</strong><span class="gEn">Classic chatbot</span><p>Odpowiada na pojedyncze pytania według skryptu lub modelu. Nie planuje i nie wykonuje wieloetapowych działań samodzielnie.</p></div>
-<div class="gItem"><strong>Autonomia</strong><span class="gEn">Autonomy</span><p>Zdolność agenta do działania bez ręcznego zatwierdzania każdego kroku — sam dobiera kolejne działania prowadzące do celu.</p></div>
-<div class="gItem"><strong>Adaptacyjność</strong><span class="gEn">Adaptability</span><p>Dostosowanie sposobu działania do zmieniających się warunków i nowych informacji w trakcie realizacji zadania.</p></div>
-<div class="gItem"><strong>System multi-agent</strong><span class="gEn">Multi-agent system</span><p>Kilku agentów współpracujących nad wspólnym celem — każdy odpowiada za swój fragment (np. researcher + redaktor + korektor).</p></div>
+<div class="gItem"><strong>Agent AI</strong><span class="gEn">AI Agent</span><p>Program, który samodzielnie realizuje cel: planuje kroki, podejmuje decyzje i wykonuje zadania, korzystając z narzędzi. Dostaje CEL, nie pojedyncze polecenie.</p></div>
+<div class="gItem"><strong>Chatbot</strong><span class="gEn">Classic chatbot</span><p>Odpowiada na pojedyncze pytania według scenariusza. Czeka na każdą komendę — nie działa z własnej inicjatywy.</p></div>
+<div class="gItem"><strong>Autonomia</strong><span class="gEn">Autonomy</span><p>Agent działa samodzielnie w ramach wyznaczonych granic — sam dobiera kolejne kroki.</p></div>
+<div class="gItem"><strong>Adaptacyjność</strong><span class="gEn">Adaptability</span><p>Dostosowuje się do nowych informacji i zmian sytuacji w trakcie zadania.</p></div>
+<div class="gItem"><strong>Współpraca</strong><span class="gEn">Collaboration</span><p>Potrafi działać z innymi agentami i z człowiekiem w jednym procesie.</p></div>
+<div class="gItem"><strong>Instrukcja systemowa</strong><span class="gEn">System prompt</span><p>„Umowa o pracę” agenta: rola, cel, kontekst, zasady, granice i format. Fundament zachowania agenta.</p></div>
 <div class="gSec">Typy agentów</div>
-<div class="gItem"><strong>Agent reaktywny</strong><span class="gEn">Reactive agent</span><p>Reaguje na bieżące zdarzenia według prostych reguł, bez długoterminowego planowania. Szybki, do prostych, powtarzalnych reakcji.</p></div>
-<div class="gItem"><strong>Agent deliberatywny</strong><span class="gEn">Deliberative agent</span><p>Planuje i analizuje wiele kroków przed działaniem. Najlepszy, gdy zadanie wymaga strategii i rozważenia scenariuszy.</p></div>
-<div class="gItem"><strong>Agent hybrydowy</strong><span class="gEn">Hybrid agent</span><p>Łączy szybkie reagowanie na zdarzenia z planowaniem i analizą — najczęściej spotykany w praktyce.</p></div>
+<div class="gItem"><strong>Agent reaktywny</strong><span class="gEn">Reactive</span><p>Reaguje na zdarzenia według prostych reguł, bez planowania. Np. automatyczna odpowiedź na FAQ.</p></div>
+<div class="gItem"><strong>Agent deliberatywny</strong><span class="gEn">Deliberative</span><p>Planuje i analizuje wiele kroków przed działaniem. Np. raport, harmonogram, analiza ofert.</p></div>
+<div class="gItem"><strong>Agent hybrydowy</strong><span class="gEn">Hybrid</span><p>Łączy szybką reakcję z planowaniem. Np. pełna obsługa zapytania klienta od A do Z.</p></div>
 <div class="gSec">Projektowanie agenta</div>
-<div class="gItem"><strong>Prompt systemowy</strong><span class="gEn">System prompt</span><p>Stała instrukcja definiująca agenta: rola, cel, kontekst, zasady, ograniczenia i format odpowiedzi. Fundament zachowania agenta.</p></div>
-<div class="gItem"><strong>RCKZOF</strong><span class="gEn">Rola-Cel-Kontekst-Zasady-Ograniczenia-Format</span><p>Struktura dobrej instrukcji agenta: kim jest, po co działa, co wie, jak działa, czego nie wolno i jak ma odpowiadać.</p></div>
-<div class="gItem"><strong>Cel agenta</strong><span class="gEn">Agent goal</span><p>Jasno określony rezultat, do którego agent dąży. Punkt wyjścia całego projektowania — bez celu nie ma agenta.</p></div>
-<div class="gItem"><strong>Ograniczenia</strong><span class="gEn">Constraints / guardrails</span><p>Granice, których agent nie może przekroczyć (np. nie podaje danych osobowych, nie obiecuje rabatów). Chronią przed błędami i nadużyciami.</p></div>
-<div class="gItem"><strong>Human-in-the-loop</strong><span class="gEn">Człowiek w pętli</span><p>Zasada, że człowiek nadzoruje agenta i zatwierdza kluczowe decyzje przed ich realizacją.</p></div>
-<div class="gSec">Narzędzia i no-code</div>
-<div class="gItem"><strong>LLM</strong><span class="gEn">Large Language Model</span><p>Duży model językowy (np. GPT, Claude, Gemini) — silnik, na którym działają agenci. Generuje tekst, analizuje, planuje.</p></div>
-<div class="gItem"><strong>Custom GPT</strong><span class="gEn">Własny GPT (ChatGPT)</span><p>Spersonalizowany agent w ChatGPT z własną instrukcją i wiedzą (plikami). Tworzysz bez kodu w kilka minut.</p></div>
-<div class="gItem"><strong>Projekt (Claude)</strong><span class="gEn">Claude Project</span><p>Przestrzeń w Claude z własnymi instrukcjami i dołączoną wiedzą — odpowiednik Custom GPT.</p></div>
-<div class="gItem"><strong>Zapier</strong><span class="gEn">no-code automation</span><p>Łączy aplikacje i automatyzuje przepływy pracy bez programowania: trigger → akcje.</p></div>
-<div class="gItem"><strong>Make.com</strong><span class="gEn">no-code automation</span><p>Wizualne budowanie scenariuszy automatyzacji (dawniej Integromat) — moduły łączone w przepływ, z krokami AI.</p></div>
-<div class="gItem"><strong>n8n</strong><span class="gEn">workflow automation</span><p>Otwarte narzędzie do automatyzacji workflow, które można hostować u siebie. Elastyczne integracje i kroki AI.</p></div>
-<div class="gItem"><strong>Trigger</strong><span class="gEn">Wyzwalacz</span><p>Zdarzenie uruchamiające automatyzację (np. „nowy formularz”, „nowy mail”). Początek każdego scenariusza no-code.</p></div>
-<div class="gItem"><strong>Workflow</strong><span class="gEn">Przepływ pracy</span><p>Sekwencja połączonych kroków: trigger → akcja 1 → krok AI → akcja 2. Serce automatyzacji end-to-end.</p></div>
-<div class="gItem"><strong>API</strong><span class="gEn">Application Programming Interface</span><p>Sposób, w jaki aplikacje „rozmawiają” ze sobą. Pozwala agentowi korzystać z zewnętrznych narzędzi i danych.</p></div>
-<div class="gItem"><strong>Webhook</strong><span class="gEn">Web callback</span><p>Automatyczne powiadomienie wysyłane z jednej aplikacji do drugiej w momencie zdarzenia — częsty trigger w Make/Zapier.</p></div>
-<div class="gSec">Wiedza i bezpieczeństwo</div>
-<div class="gItem"><strong>RAG</strong><span class="gEn">Retrieval-Augmented Generation</span><p>Technika, w której agent pobiera wiedzę z Twoich dokumentów przed odpowiedzią — mniej halucynacji, więcej konkretów.</p></div>
-<div class="gItem"><strong>Baza wiedzy</strong><span class="gEn">Knowledge base</span><p>Zbiór dokumentów (cennik, FAQ, procedury), z których korzysta agent. Im lepsza baza, tym trafniejsze odpowiedzi.</p></div>
-<div class="gItem"><strong>Halucynacja</strong><span class="gEn">Hallucination</span><p>Pewnie brzmiąca, ale nieprawdziwa odpowiedź AI. Dlatego kluczowa jest weryfikacja i human-in-the-loop.</p></div>
-<div class="gItem"><strong>Dane osobowe / RODO</strong><span class="gEn">GDPR</span><p>Nie wolno wklejać pełnych danych osobowych klientów do publicznych narzędzi AI. Zawsze weryfikuj i minimalizuj dane.</p></div>
-<div class="gItem"><strong>Token</strong><span class="gEn">Token</span><p>Jednostka tekstu, którą przetwarza model. Wpływa na koszt i limit długości rozmowy z agentem.</p></div>
-<div class="gItem"><strong>MCP</strong><span class="gEn">Model Context Protocol</span><p>Standard łączenia agentów z zewnętrznymi narzędziami i danymi w bezpieczny, uporządkowany sposób.</p></div>
+<div class="gItem"><strong>CEL</strong><span class="gEn">Goal</span><p>Po co agent istnieje — jedno zdanie. Punkt wyjścia całego projektowania.</p></div>
+<div class="gItem"><strong>ROLA</strong><span class="gEn">Role</span><p>Kim jest agent i dla kogo pracuje.</p></div>
+<div class="gItem"><strong>Kontekst i wiedza</strong><span class="gEn">Context & knowledge</span><p>Co agent musi wiedzieć o firmie: produkty, ceny, procedury, ton.</p></div>
+<div class="gItem"><strong>Zasady</strong><span class="gEn">Rules</span><p>Priorytety, ton i format odpowiedzi. Pisz konkretnie („max 5 zdań”, nie „krótko”).</p></div>
+<div class="gItem"><strong>Granice</strong><span class="gEn">Guardrails</span><p>Czego agent nie robi i kiedy przekazuje sprawę człowiekowi.</p></div>
+<div class="gItem"><strong>Eskalacja</strong><span class="gEn">Escalation</span><p>Reguła: kiedy i jak agent oddaje sprawę człowiekowi (np. reklamacje, rabaty).</p></div>
+<div class="gItem"><strong>Human-in-the-loop</strong><span class="gEn">Człowiek w pętli</span><p>Człowiek nadzoruje agenta i zatwierdza kluczowe decyzje przed realizacją.</p></div>
+<div class="gSec">Narzędzia (bezpłatne)</div>
+<div class="gItem"><strong>Gemini Gems</strong><span class="gEn">Google — bezpłatne</span><p>Własny agent Google — wystarczy konto Google. Podstawowe narzędzie do budowy agenta na tym szkoleniu.</p></div>
+<div class="gItem"><strong>NotebookLM</strong><span class="gEn">Google — bezpłatne</span><p>Agent-researcher: wrzucasz źródła, dostajesz analizy i odpowiedzi oparte wyłącznie na nich.</p></div>
+<div class="gItem"><strong>Perplexity</strong><span class="gEn">bezpłatne (plan free)</span><p>Szybki research rynku z podanymi źródłami.</p></div>
+<div class="gItem"><strong>ChatGPT</strong><span class="gEn">bezpłatne / Plus</span><p>Rozmowa z AI. Uwaga: własny Custom GPT wymaga płatnego planu Plus.</p></div>
+<div class="gItem"><strong>Claude</strong><span class="gEn">bezpłatne / Pro</span><p>Rozmowa i analiza plików. Projekty w pełni dostępne w planie Pro.</p></div>
+<div class="gItem"><strong>LLM</strong><span class="gEn">Large Language Model</span><p>Duży model językowy (Gemini, GPT, Claude) — silnik, na którym działa agent.</p></div>
+<div class="gItem"><strong>Prompt</strong><span class="gEn">Polecenie dla AI</span><p>Instrukcja tekstowa dla AI. Im konkretniejszy prompt, tym lepszy wynik.</p></div>
+<div class="gSec">Bezpieczeństwo</div>
+<div class="gItem"><strong>Halucynacja</strong><span class="gEn">Hallucination</span><p>Pewnie brzmiąca, ale nieprawdziwa odpowiedź AI. Dlatego testuj „podchwytliwymi” pytaniami i weryfikuj.</p></div>
+<div class="gItem"><strong>Dane osobowe / RODO</strong><span class="gEn">GDPR</span><p>Nie wklejaj pełnych danych osobowych klientów do publicznych narzędzi AI. Minimalizuj dane.</p></div>
+<div class="gItem"><strong>Iteracja</strong><span class="gEn">Iteration</span><p>Żadna instrukcja nie jest dobra w pierwszej wersji — testuj, poprawiaj, testuj ponownie.</p></div>
 </div>
 </div>
 <div class="gContent" id="gc-test">
-<div class="qBody">
-  <div class="qScore" id="qScore"></div>
-  <button class="qReset" id="qReset">🔄 Zacznij test od nowa</button>
-  <div id="quizContainer"></div>
+<div class="qBody"><div class="qScore" id="qScore"></div><button class="qReset" id="qReset">🔄 Zacznij test od nowa</button><div id="quizContainer"></div></div>
+</div>
+<div class="gContent" id="gc-harmonogram">
+<div class="gBody">
+<div class="schnow"><b>1 h szkoleniowa = 45 min.</b> Przerwy nie są wliczane do czasu szkolenia. Prowadzący: Matsvei Dzmitryieu.</div>
+<div class="sched"><div class="schday">DZIEŃ 1 — Podstawy i projektowanie<span class="d">04.07.2026 · 8h</span></div>
+<div class="schrow"><span class="tm">09:00–10:30</span><span class="nm"><b>M1:</b> Czym są Agenci AI</span><span class="du">1:30</span></div>
+<div class="schrow br"><span class="tm">10:30–10:45</span><span class="nm">Przerwa</span><span class="du">15</span></div>
+<div class="schrow"><span class="tm">10:45–12:15</span><span class="nm"><b>M2:</b> Myślenie agentowe i projektowanie</span><span class="du">1:30</span></div>
+<div class="schrow br"><span class="tm">12:15–12:45</span><span class="nm">Przerwa</span><span class="du">30</span></div>
+<div class="schrow"><span class="tm">12:45–14:15</span><span class="nm"><b>M3:</b> Budowa agenta krok po kroku</span><span class="du">1:30</span></div>
+<div class="schrow br"><span class="tm">14:15–14:30</span><span class="nm">Przerwa</span><span class="du">15</span></div>
+<div class="schrow"><span class="tm">14:30–16:00</span><span class="nm"><b>M4:</b> Agenci w pracy indywidualnej</span><span class="du">1:30</span></div>
+</div>
+<div class="sched"><div class="schday">DZIEŃ 2 — Automatyzacja i wdrożenia<span class="d">05.07.2026 · 8h</span></div>
+<div class="schrow"><span class="tm">09:00–10:30</span><span class="nm"><b>M5:</b> Agenci w zespołach</span><span class="du">1:30</span></div>
+<div class="schrow br"><span class="tm">10:30–10:45</span><span class="nm">Przerwa</span><span class="du">15</span></div>
+<div class="schrow"><span class="tm">10:45–12:15</span><span class="nm"><b>M6:</b> Integracje i no-code</span><span class="du">1:30</span></div>
+<div class="schrow br"><span class="tm">12:15–12:30</span><span class="nm">Przerwa</span><span class="du">15</span></div>
+<div class="schrow"><span class="tm">12:30–14:00</span><span class="nm"><b>M7:</b> Bezpieczeństwo i etyka</span><span class="du">1:30</span></div>
+<div class="schrow br"><span class="tm">14:00–14:15</span><span class="nm">Przerwa</span><span class="du">15</span></div>
+<div class="schrow"><span class="tm">14:15–15:00</span><span class="nm"><b>M8:</b> Projekt końcowy</span><span class="du">45</span></div>
+<div class="schrow ev"><span class="tm">15:00–15:45</span><span class="nm"><b>Ewaluacja</b> — test online</span><span class="du">45</span></div>
+</div>
 </div>
 </div>
 </div><!-- /gPanel -->
 
 <header class="top">
   <div class="ti">
-    <img class="tl" src="data:image/jpeg;base64,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" alt="Energia dla Biznesu">
+    <span class="logopill"><img class="tl2" src="energia-logo.png" alt="Energia dla Biznesu"></span>
     <div class="tr">
       <div class="tt">Cyfrowi Współpracownicy: Agenci AI</div>
       <div class="ts">Dzień 1 · <b>Podstawy i projektowanie Agentów AI</b></div>
@@ -297,174 +327,159 @@ footer{background:var(--ink);color:#9aa39a;margin-top:30px;padding:20px 24px;fon
   </div>
 </header>
 
-<div class="ebar">
-  <div class="ebi">
-    <div class="ebr">
-      <span class="ebl">⚡ Postęp</span>
-      <span class="ebc"><b id="pct">0%</b> · <span id="dc">0</span>/<span id="tc">0</span> kroków</span>
-    </div>
-    <div class="bar"><div class="bf" id="bf"></div></div>
-  </div>
-</div>
+<div class="ebar"><div class="ebi"><div class="ebr">
+  <span class="ebl">⚡ Postęp</span>
+  <span class="ebc"><b id="pct">0%</b> · <span id="dc">0</span>/<span id="tc">0</span> kroków</span>
+</div><div class="bar"><div class="bf" id="bf"></div></div></div></div>
 
 <main class="wrap">
 
 <section class="intro">
   <h1>Twój cyfrowy współpracownik<br>— Dzień 1: zrozum, zaprojektuj, zbuduj.</h1>
-  <p>Dziś poznasz, czym jest Agent AI i jak „myśli”, a następnie zbudujesz własnego agenta: od instrukcji i wiedzy po pierwsze zastosowania w Twojej pracy. Pracujesz na realnych zadaniach ze swojego stanowiska. Materiały do Dnia 2 znajdziesz na osobnej stronie.</p>
-  <div class="r"><b>Słownik i Szybki Test</b> — kliknij przycisk 📖 po prawej. Test to szybka powtórka wiedzy z zakresu szkolenia.</div>
+  <p>20% teorii, 80% praktyki. Dziś, krok po kroku, zbudujesz działającego Agenta AI dla swojej firmy — w bezpłatnym Gemini Gems. Wszystkie narzędzia są darmowe, a każde ćwiczenie ma gotowy prompt i przykład do wklejenia, więc zrobisz je nawet bez własnych dokumentów.</p>
+  <div class="r"><b>Po prawej:</b> 📖 Słownik · ⚡ Szybki Test · 🗓 Harmonogram — kliknij, by rozwinąć. Moduły przełączasz zakładkami poniżej (na górze i na dole każdej strony).</div>
 </section>
 
-<!-- PREZENTACJA (na początku, jak w referencji) -->
 <details class="gma" open>
   <summary>📊 Prezentacja szkoleniowa — Dzień 1 · otwórz i korzystaj przez cały dzień</summary>
   <div class="gif"><iframe src="Cyfrowi-Wspolpracownicy-Dzien-1.pdf" title="Prezentacja — Dzień 1"></iframe></div>
 </details>
 
-<!-- PRETEST -->
 <div class="tcard" style="grid-template-columns:1fr">
   <a class="tc" href='https://docs.google.com/forms/d/e/1FAIpQLSeUkrZrW7UTNx5k-1KpuWKdCndxIdLINNZdCO9qrmZq0uZOhQ/viewform' target="_blank"><div class="tcl">Przed szkoleniem</div><h3>PRETEST — test wiedzy</h3><p>Wypełnij przed startem Dnia 1. Wynik służy tylko porównaniu postępów i nie wpływa na udział w szkoleniu.</p></a>
 </div>
 
-<div class="tabs" role="tablist"><button class="tab on" data-panel="p1"><span class="tn">Dzień 1</span><span class="tk">Ćwiczenia — Moduły 1–4</span><span class="th">Projektowanie i budowa</span></button><button class="tab" data-panel="p2"><span class="tn">Harmonogram</span><span class="tk">Plan 2 dni</span><span class="th">Godziny · przerwy</span></button></div>
+<div class="tabs" role="tablist"><button class="tab on" data-panel="p1"><span class="tn">Moduł 1</span><span class="tk">Czym są Agenci AI</span><span class="th">Teoria + mapa procesów</span></button><button class="tab" data-panel="p2"><span class="tn">Moduł 2</span><span class="tk">Projektowanie agenta</span><span class="th">Karta + instrukcja</span></button><button class="tab" data-panel="p3"><span class="tn">Moduł 3</span><span class="tk">Budowa agenta</span><span class="th">Gemini Gems (bezpłatnie)</span></button><button class="tab" data-panel="p4"><span class="tn">Moduł 4</span><span class="tk">Praca indywidualna</span><span class="th">Research + decyzje</span></button></div>
 
 <div class="panel on" id="p1">
 <article class="cw" data-cw="Moduł1">
-  <div class="cwh"><div class="cwm"><span class="cwn">Moduł 1</span><span class="cwmod">Wprowadzenie</span><span class="cwt">~2h</span></div><span class="cwbadge">✓ Ukończone</span></div>
-  <h2 class="cwtitle">Czym są Cyfrowi Współpracownicy i Agenci AI?</h2>
-  <p class="cwgoal"><b>Cel:</b> Zrozumiesz, czym jest Agent AI i jak różni się od chatbota, oraz zmapujesz zadania w swojej pracy, które można oddać agentowi.</p>
-  <div class="cwbody">
-    <div class="sec">Kroki</div>
-    <label class="step"><input type="checkbox" data-step><span>Obejrzyj część teoretyczną w prezentacji Dnia 1 (na górze strony).</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Otwórz ChatGPT lub Claude i zadaj to samo pytanie dwa razy: raz jak „chatbotowi” (jedno pytanie), raz jak „agentowi” (z celem i krokami) — zauważ różnicę.</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Skopiuj prompt poniżej i wypisz 10 powtarzalnych zadań ze swojej pracy.</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Zaznacz 3 zadania o największym potencjale automatyzacji — wrócisz do nich w Module 2.</span></label>
-    <div class="sec">Prompt</div>
-    <div class="prom"><div class="pbar"><span>Prompt — mapa zadań do automatyzacji</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jestem <b>[TWOJA ROLA]</b> w branży <b>[BRANŻA]</b>.
-Wypisz 10 powtarzalnych, czasochłonnych zadań w mojej pracy, które mógłby przejąć Agent AI.
+<div class="cwh"><div class="cwm"><span class="cwn">Moduł 1</span><span class="cwmod">Teoria + Ćwiczenie 1</span><span class="cwt">~1:30</span></div><span class="cwbadge">✓ Ukończone</span></div>
+<h2 class="cwtitle">Czym są Cyfrowi Współpracownicy i Agenci AI?</h2>
+<p class="cwgoal"><b>Cel:</b> Zrozumiesz, czym jest Agent AI i czym różni się od chatbota, a na koniec wybierzesz JEDEN proces ze swojej pracy — to Twój projekt na całe szkolenie.</p>
+<div class="cwbody">
+<div class="teo"><h3>Czym jest Agent AI?</h3><p><b>Agent AI</b> to program, który samodzielnie realizuje postawiony cel: planuje kroki, podejmuje decyzje i wykonuje zadania, korzystając z dostępnych narzędzi.</p><ul><li>Dostaje <b>CEL</b>, nie pojedyncze polecenie</li><li>Sam dzieli pracę na kroki i wykonuje je po kolei</li><li>Korzysta z wiedzy, plików i innych aplikacji</li><li>Wraca z <b>gotowym wynikiem</b>, nie z półproduktem</li></ul></div>
+<div class="inspire"><h3>Trzy cechy systemu agentowego</h3><div class="igrid igrid3"><div class="icard"><strong>Autonomia</strong><p>Działa samodzielnie w ramach wyznaczonych granic</p></div><div class="icard"><strong>Adaptacyjność</strong><p>Dostosowuje się do nowych informacji i zmian sytuacji</p></div><div class="icard"><strong>Współpraca</strong><p>Potrafi działać z innymi agentami i z człowiekiem</p></div></div></div>
+<div class="teo"><h3>Agent AI vs klasyczny chatbot</h3><p>Chatbot odpowiada na pojedyncze pytania według scenariusza i czeka na każdą komendę. Agent rozumie cel, planuje i działa wieloetapowo.</p><ul><li><b>Inicjatywa</b> — agent sam wykonuje kolejne kroki, chatbot tylko reaguje</li><li><b>Narzędzia</b> — agent używa wyszukiwarki, plików i aplikacji; chatbot zwykle tylko rozmawia</li></ul></div>
+<div class="hint"><b>Przykład:</b> chatbot odpowie na pytanie „ile to kosztuje?”. Agent zbierze wymagania, dobierze wariant, przygotuje wstępną wycenę i szkic maila.</div>
+<div class="inspire"><h3>Typy agentów — dobierz do zadania</h3><div class="igrid igrid3"><div class="icard"><strong>Reaktywny</strong><p>Prosta reakcja wg reguł. Np. odpowiedź na FAQ.</p></div><div class="icard"><strong>Deliberatywny</strong><p>Planuje wiele kroków. Np. raport, analiza ofert.</p></div><div class="icard"><strong>Hybrydowy</strong><p>Reakcja + planowanie. Np. obsługa klienta od A do Z.</p></div></div></div>
+<div class="hint"><b>Zasada doboru:</b> prosty, powtarzalny problem → agent reaktywny. Złożony, wieloetapowy → deliberatywny lub hybrydowy.</div>
+<div class="teo"><h3>Gdzie agenci realnie pomagają</h3><p>Najczęściej automatyzowane procesy — i trzy korzyści, które warto zapamiętać:</p><ul><li>Obsługa zapytań klientów i wstępne wyceny</li><li>Research, analizy i raporty</li><li>Szkice e-maili, ofert i treści</li><li>Umawianie spotkań i przypomnienia</li><li>Porządkowanie danych</li><li><b>Korzyści:</b> ⏱ oszczędność czasu · ✅ mniej błędów · 💡 lepsze decyzje</li></ul></div>
+<div class="sec">Ćwiczenie 1A · Mapa procesów Twojej firmy</div>
+<label class="step"><input type="checkbox" data-step><span>Skopiuj prompt poniżej i uzupełnij <b>[ROLA]</b> oraz <b>[BRANŻA]</b> (albo użyj gotowego przykładu pod promptem).</span></label><label class="step"><input type="checkbox" data-step><span>Wklej go do <b>Gemini</b> (albo ChatGPT / Claude) i wyślij.</span></label><label class="step"><input type="checkbox" data-step><span>Przejrzyj listę zadań — przy każdym oceń korzyść i dobierz typ agenta.</span></label><label class="step"><input type="checkbox" data-step><span>Wybierz <b>JEDEN</b> proces (duża korzyść, małe ryzyko) — zapisz go w notatkach. To Twój projekt na całe szkolenie.</span></label>
+<div class="prom"><div class="pbar"><span>Prompt — Mapa procesów</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jestem <b>[TWOJA ROLA]</b> w <b>[BRANŻA / OPIS FIRMY w 1 zdaniu]</b>.
+Pomóż mi znaleźć zadania, które może przejąć Agent AI.
 
-Dla każdego zadania podaj w tabeli:
-- nazwa zadania
-- ile czasu zajmuje tygodniowo
-- dlaczego nadaje się do automatyzacji (1 zdanie)
+1. Wypisz 8–10 powtarzalnych, czasochłonnych zadań z mojego typowego tygodnia pracy.
+2. Dla każdego zadania podaj w tabeli:
+   - nazwa zadania
+   - czas tygodniowo (szacunek)
+   - główna korzyść: czas / mniej błędów / lepsze decyzje
+   - typ agenta: reaktywny / deliberatywny / hybrydowy
+3. Na końcu wskaż JEDEN najlepszy proces na start (duża korzyść, małe ryzyko).
 
-Na końcu wskaż 3 zadania o najwyższym potencjale (największa oszczędność czasu przy najmniejszym ryzyku).</pre></div>
-    <div class="sec">Notatki</div>
-    <div class="notes"><textarea data-notes placeholder="Moje 3 zadania do automatyzacji: 1) …  2) …  3) …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
-  </div>
-</article>
-<article class="cw" data-cw="Moduł2">
-  <div class="cwh"><div class="cwm"><span class="cwn">Moduł 2</span><span class="cwmod">Projektowanie</span><span class="cwt">~2h</span></div><span class="cwbadge">✓ Ukończone</span></div>
-  <h2 class="cwtitle">Myślenie agentowe i projektowanie zadań</h2>
-  <p class="cwgoal"><b>Cel:</b> Napiszesz kompletną instrukcję (prompt systemowy) swojego pierwszego agenta według struktury Rola–Cel–Kontekst–Zasady–Ograniczenia–Format.</p>
-  <div class="cwbody">
-    <div class="sec">Kroki</div>
-    <label class="step"><input type="checkbox" data-step><span>Wybierz jedno zadanie z Modułu 1.</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Uzupełnij szablon instrukcji systemowej poniżej — każdą sekcję wypełnij konkretami swojego biznesu.</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Przetestuj instrukcję na 2 przykładowych sytuacjach.</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Popraw ZASADY i OGRANICZENIA tam, gdzie agent „zgadywał” lub wychodził poza rolę.</span></label>
-    <div class="hint"><b>Dobra instrukcja = dobry agent.</b> 80% jakości agenta powstaje tutaj, zanim cokolwiek zbudujesz.</div>
-    <div class="sec">Prompt</div>
-    <div class="prom"><div class="pbar"><span>Szablon — instrukcja systemowa agenta (RCKZOF)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>ROLA: Jesteś <b>[np. asystentem obsługi klienta]</b> dla <b>[firma / branża]</b>.
-CEL: Twoim zadaniem jest <b>[konkretny, mierzalny cel]</b>.
-KONTEKST I WIEDZA: <b>[produkty/usługi, ceny, ton marki, najczęstsze pytania]</b>.
-ZASADY DZIAŁANIA: <b>[krok po kroku jak działasz; jak zadajesz pytania doprecyzowujące]</b>.
-OGRANICZENIA: Nie podajesz <b>[danych poufnych / obietnic]</b>. Gdy nie znasz odpowiedzi — <b>[eskalujesz do człowieka]</b>.
-FORMAT ODPOWIEDZI: <b>[np. krótko, punktami, po polsku, ton przyjazny]</b>.</pre></div>
-    <div class="sec">Notatki</div>
-    <div class="notes"><textarea data-notes placeholder="Moja instrukcja systemowa (RCKZOF): …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
-  </div>
-</article>
-<article class="cw" data-cw="Moduł3">
-  <div class="cwh"><div class="cwm"><span class="cwn">Moduł 3</span><span class="cwmod">Budowa</span><span class="cwt">~2h</span></div><span class="cwbadge">✓ Ukończone</span></div>
-  <h2 class="cwtitle">Budowa Agentów AI krok po kroku</h2>
-  <p class="cwgoal"><b>Cel:</b> Zbudujesz działającego agenta (Custom GPT w ChatGPT lub Projekt w Claude), dodasz mu wiedzę i przetestujesz na realnych pytaniach.</p>
-  <div class="cwbody">
-    <div class="sec">Kroki</div>
-    <label class="step"><input type="checkbox" data-step><span>Otwórz ChatGPT → <b>Explore GPTs → Create</b> (lub Claude → <b>Projects → New</b>).</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Wklej instrukcję systemową z Modułu 2.</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Dodaj wiedzę: wgraj plik (cennik, FAQ, procedury) lub wklej kluczowe informacje.</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Wygeneruj 5 pytań testowych (prompt poniżej), zadaj je agentowi, zanotuj błędy.</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Popraw instrukcję (optymalizacja) i zapisz nazwę / link swojego agenta w notatkach.</span></label>
-    <div class="hint"><b>Kolejność:</b> cel i zadania → instrukcja i wiedza → testowanie → optymalizacja → wdrożenie.</div>
-    <div class="sec">Prompt</div>
-    <div class="prom"><div class="pbar"><span>Prompt — scenariusze testowe agenta</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Wygeneruj 5 trudnych pytań testowych, które mogą zadać moi klienci, aby sprawdzić, czy mój agent:
-1) odpowiada poprawnie i zgodnie z wiedzą,
-2) trzyma się zasad i ograniczeń,
-3) wie, kiedy przekazać sprawę człowiekowi.
-
-Dla każdego pytania dopisz, jakiej dobrej odpowiedzi oczekuję.</pre></div>
-    <div class="sec">Notatki</div>
-    <div class="notes"><textarea data-notes placeholder="Nazwa/link mojego agenta: …  Błędy do poprawy: …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
-  </div>
-</article>
-<article class="cw" data-cw="Moduł4">
-  <div class="cwh"><div class="cwm"><span class="cwn">Moduł 4</span><span class="cwmod">Praca indywidualna</span><span class="cwt">~2h</span></div><span class="cwbadge">✓ Ukończone</span></div>
-  <h2 class="cwtitle">Agenci AI w pracy indywidualnej</h2>
-  <p class="cwgoal"><b>Cel:</b> Uruchomisz agentów do 3 codziennych zadań: research, analiza/raport oraz szkice komunikacji.</p>
-  <div class="cwbody">
-    <div class="sec">Kroki</div>
-    <label class="step"><input type="checkbox" data-step><span><b>Research:</b> użyj promptu badawczego, aby zebrać i streścić informacje na wybrany temat.</span></label>
-    <label class="step"><input type="checkbox" data-step><span><b>Analiza danych:</b> wklej dane (np. z arkusza) i poproś o wnioski oraz rekomendacje.</span></label>
-    <label class="step"><input type="checkbox" data-step><span><b>Komunikacja:</b> wygeneruj szkic maila lub podsumowania spotkania.</span></label>
-    <label class="step"><input type="checkbox" data-step><span>Zapisz, które z 3 zadań zaoszczędziło Ci najwięcej czasu.</span></label>
-    <div class="sec">Prompt</div>
-    <div class="prom"><div class="pbar"><span>Prompt — research z weryfikacją</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jestem <b>[ROLA]</b>. Zbierz i streść najważniejsze informacje na temat: <b>[TEMAT]</b>.
-Podaj: 5 kluczowych faktów, 3 wnioski dla mojej pracy i 3 pytania, które warto jeszcze zbadać.
-Zaznacz, które informacje wymagają weryfikacji u źródła.</pre></div>
-    <div class="sec">Prompt</div>
-    <div class="prom"><div class="pbar"><span>Prompt — analiza danych i raport</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Oto dane: <b>[WKLEJ DANE / OPIS]</b>.
-Wykonaj analizę: 1) 3 najważniejsze wnioski, 2) co wymaga uwagi/ryzyka, 3) 3 konkretne rekomendacje działań. Odpowiedz zwięźle, punktami.</pre></div>
-    <div class="sec">Prompt</div>
-    <div class="prom"><div class="pbar"><span>Prompt — szkic maila</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Napisz profesjonalny, uprzejmy e-mail po polsku.
-Cel maila: <b>[np. odpowiedź na zapytanie / follow-up]</b>.
-Odbiorca: <b>[kto]</b>. Kontekst: <b>[sytuacja]</b>.
-Ton: ludzki, konkretny, bez korporacyjnych zwrotów. Dodaj jasne CTA.</pre></div>
-    <div class="sec">Notatki</div>
-    <div class="notes"><textarea data-notes placeholder="Które zadanie zaoszczędziło najwięcej czasu: …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
-  </div>
-</article>
-
-<section style="background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:20px">
-  <h2 style="font-family:'Archivo',sans-serif;font-weight:800;font-size:17px;color:var(--ink);margin-bottom:12px">🔗 Narzędzia agentowe</h2>
-<div class="tgrid">
-<a class="tool" href="https://chatgpt.com" target="_blank"><b>ChatGPT</b><span class="tu">chatgpt.com</span><p>Custom GPTs — własne agenty bez kodu</p></a>
-<a class="tool" href="https://claude.ai" target="_blank"><b>Claude</b><span class="tu">claude.ai</span><p>Projekty, długi kontekst, analiza plików</p></a>
-<a class="tool" href="https://gemini.google.com" target="_blank"><b>Google Gemini</b><span class="tu">gemini.google.com</span><p>Agent w ekosystemie Google i Workspace</p></a>
-<a class="tool" href="https://zapier.com" target="_blank"><b>Zapier</b><span class="tu">zapier.com</span><p>Automatyzacja: trigger → akcje, no-code</p></a>
-<a class="tool" href="https://make.com" target="_blank"><b>Make.com</b><span class="tu">make.com</span><p>Wizualne scenariusze automatyzacji + AI</p></a>
-<a class="tool" href="https://n8n.io" target="_blank"><b>n8n</b><span class="tu">n8n.io</span><p>Workflow automation, self-hosting</p></a>
-<a class="tool" href="https://notebooklm.google.com" target="_blank"><b>NotebookLM</b><span class="tu">notebooklm.google.com</span><p>Agent-badacz na Twoich dokumentach</p></a>
-<a class="tool" href="https://perplexity.ai" target="_blank"><b>Perplexity</b><span class="tu">perplexity.ai</span><p>Research z cytowaniem źródeł</p></a>
+Pisz po polsku, konkretnie, w tabeli.</pre></div>
+<div class="prom ex"><div class="pbar"><span>📋 Przykład — użyj, jeśli nie chcesz opisywać swojej firmy</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jestem właścicielką małego sklepu internetowego z rękodziełem (świece sojowe i ozdoby). Sama obsługuję zamówienia, odpowiadam na wiadomości klientów na Instagramie i mailowo, pakuję paczki i prowadzę social media.</pre></div>
+<div class="tgrid"><a class="tool" href="https://gemini.google.com" target="_blank"><b>Gemini<span class="freetag">bezpłatne</span></b><span class="tu">gemini.google.com</span><p>Bez kodu, konto Google</p></a><a class="tool" href="https://chatgpt.com" target="_blank"><b>ChatGPT<span class="freetag">bezpłatne</span></b><span class="tu">chatgpt.com</span><p>Plan bezpłatny wystarczy</p></a><a class="tool" href="https://claude.ai" target="_blank"><b>Claude<span class="freetag">bezpłatne</span></b><span class="tu">claude.ai</span><p>Plan bezpłatny wystarczy</p></a></div>
+<div class="notes"><textarea data-notes placeholder="Mój wybrany proces (projekt na całe szkolenie): …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
+</div></article>
+<div class="tabs tabs-bottom" role="tablist"><button class="tab" data-panel="p1"><span class="tn">Moduł 1</span><span class="tk">Czym są Agenci AI</span><span class="th">Teoria + mapa procesów</span></button><button class="tab" data-panel="p2"><span class="tn">Moduł 2</span><span class="tk">Projektowanie agenta</span><span class="th">Karta + instrukcja</span></button><button class="tab" data-panel="p3"><span class="tn">Moduł 3</span><span class="tk">Budowa agenta</span><span class="th">Gemini Gems (bezpłatnie)</span></button><button class="tab" data-panel="p4"><span class="tn">Moduł 4</span><span class="tk">Praca indywidualna</span><span class="th">Research + decyzje</span></button></div>
 </div>
-</section>
-<div class="tabs tabs-bottom" role="tablist"><button class="tab on" data-panel="p1"><span class="tn">Dzień 1</span><span class="tk">Ćwiczenia — Moduły 1–4</span><span class="th">Projektowanie i budowa</span></button><button class="tab" data-panel="p2"><span class="tn">Harmonogram</span><span class="tk">Plan 2 dni</span><span class="th">Godziny · przerwy</span></button></div>
-</div>
-
 <div class="panel" id="p2">
-<div class="schnow"><b>Wskazówka:</b> 1 h szkoleniowa = 45 min. Przerwy nie są wliczane do czasu szkolenia. Prowadzący: <b>Matsvei Dzmitryieu</b>.</div>
-<div class="sched">
-<div class="schday"><span>DZIEŃ 1 — Podstawy i projektowanie Agentów AI</span><span class="d">04.07.2026 (piątek) · 8h</span></div>
-<div class="schrow"><span class="tm">09:00–10:30</span><span class="nm"><b>Moduł 1:</b> Czym są Cyfrowi Współpracownicy i Agenci AI?</span><span class="du">1:30</span></div>
-<div class="schrow br"><span class="tm">10:30–10:45</span><span class="nm">Przerwa</span><span class="du">0:15</span></div>
-<div class="schrow"><span class="tm">10:45–12:15</span><span class="nm"><b>Moduł 2:</b> Myślenie agentowe i projektowanie zadań</span><span class="du">1:30</span></div>
-<div class="schrow br"><span class="tm">12:15–12:45</span><span class="nm">Przerwa (obiadowa)</span><span class="du">0:30</span></div>
-<div class="schrow"><span class="tm">12:45–14:15</span><span class="nm"><b>Moduł 3:</b> Budowa Agentów AI krok po kroku</span><span class="du">1:30</span></div>
-<div class="schrow br"><span class="tm">14:15–14:30</span><span class="nm">Przerwa</span><span class="du">0:15</span></div>
-<div class="schrow"><span class="tm">14:30–16:00</span><span class="nm"><b>Moduł 4:</b> Agenci AI w pracy indywidualnej</span><span class="du">1:30</span></div>
+<article class="cw" data-cw="Moduł2">
+<div class="cwh"><div class="cwm"><span class="cwn">Moduł 2</span><span class="cwmod">Projektowanie</span><span class="cwt">~1:30</span></div><span class="cwbadge">✓ Ukończone</span></div>
+<h2 class="cwtitle">Myślenie agentowe i prompt engineering</h2>
+<p class="cwgoal"><b>Cel:</b> Zaprojektujesz swojego agenta: wypełnisz Kartę Agenta i zamienisz ją w gotową instrukcję systemową, którą w Module 3 wkleisz do narzędzia.</p>
+<div class="cwbody">
+<div class="teo"><h3>Zanim zbudujesz agenta — zaprojektuj go</h3><p>Każdy dobry agent ma pięć elementów. To one decydują o jakości — 80% wartości agenta powstaje tutaj, zanim cokolwiek zbudujesz.</p><ul><li><b>CEL</b> — po co istnieje (jedno zdanie)</li><li><b>ROLA</b> — kim jest i dla kogo pracuje</li><li><b>KONTEKST I WIEDZA</b> — co musi wiedzieć o firmie</li><li><b>ZASADY</b> — priorytety, ton, format odpowiedzi</li><li><b>GRANICE</b> — czego nie robi i kiedy woła człowieka</li></ul></div>
+<div class="teo"><h3>Instrukcja systemowa to „umowa o pracę” agenta</h3><p>Cztery zasady dobrej instrukcji:</p><ul><li>Pisz konkretnie: „odpowiadasz maksymalnie w 5 zdaniach”, nie „odpowiadaj krótko”</li><li>Dawaj przykłady dobrych odpowiedzi i opisz przypadki brzegowe</li><li>Zdefiniuj eskalację: kiedy i jak przekazać sprawę człowiekowi</li><li>Iteruj — żadna instrukcja nie jest dobra w pierwszej wersji</li></ul></div>
+<div class="sec">Ćwiczenie 2A · Wypełnij Kartę Agenta</div>
+<label class="step"><input type="checkbox" data-step><span>Skopiuj szablon Karty Agenta poniżej.</span></label><label class="step"><input type="checkbox" data-step><span>Wypełnij 5 pól dla procesu wybranego w Module 1 (wzoruj się na przykładzie).</span></label><label class="step"><input type="checkbox" data-step><span>Zapisz kartę w notatkach — za chwilę zamienisz ją w instrukcję.</span></label>
+<div class="prom ex"><div class="pbar"><span>📋 Szablon — Karta Agenta (skopiuj i wypełnij)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>KARTA AGENTA
+1. CEL (po co istnieje, 1 zdanie): …
+2. ROLA (kim jest, dla kogo pracuje): …
+3. KONTEKST I WIEDZA (co musi wiedzieć o firmie): …
+4. ZASADY (priorytety, ton, format): …
+5. GRANICE (czego nie robi, kiedy woła człowieka): …</pre></div>
+<div class="prom ex"><div class="pbar"><span>📋 Przykład wypełnionej Karty (sklep z rękodziełem)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>KARTA AGENTA
+1. CEL: Odpowiadać na pytania klientów o produkty i zamówienia, odciążając właścicielkę.
+2. ROLA: Konsultant obsługi klienta sklepu „Świece i Ozdoby”, pracujesz dla właścicielki i klientów.
+3. KONTEKST I WIEDZA: Świece sojowe (39–79 zł) i ozdoby handmade. Wysyłka InPost 12 zł, realizacja 2–4 dni. Płatności: BLIK, przelew.
+4. ZASADY: Ton ciepły, pomocny. Max 5 zdań. Zawsze proponuj konkretny produkt lub następny krok.
+5. GRANICE: Nie obiecujesz rabatów bez zgody właścicielki. Nie podajesz danych innych klientów. Reklamacje i zwroty pieniędzy → przekazujesz właścicielce.</pre></div>
+<div class="sec">Ćwiczenie 2B · Generator instrukcji systemowej</div>
+<label class="step"><input type="checkbox" data-step><span>Skopiuj prompt „Generator instrukcji” poniżej.</span></label><label class="step"><input type="checkbox" data-step><span>Na jego końcu wklej swoją wypełnioną Kartę Agenta z ćwiczenia 2A.</span></label><label class="step"><input type="checkbox" data-step><span>Wyślij do Gemini / ChatGPT / Claude → dostaniesz gotową instrukcję.</span></label><label class="step"><input type="checkbox" data-step><span>Przetestuj ją na 3 przykładowych zapytaniach klienta i zapisz w notatkach — użyjesz jej w Module 3.</span></label>
+<div class="prom"><div class="pbar"><span>Prompt — Generator instrukcji</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jesteś ekspertem od projektowania agentów AI. Na podstawie mojej Karty Agenta napisz gotową INSTRUKCJĘ SYSTEMOWĄ (do wklejenia w Gemini Gems / Custom GPT / Claude).
+
+Instrukcja ma zawierać sekcje: ROLA, CEL, KONTEKST I WIEDZA, ZASADY DZIAŁANIA, OGRANICZENIA I ESKALACJA, FORMAT ODPOWIEDZI.
+Pisz w 2. osobie („Jesteś…”, „Odpowiadasz…”), konkretnie i jednoznacznie. Dodaj 2 przykłady dobrych odpowiedzi.
+
+Moja Karta Agenta:
+<b>[WKLEJ WYPEŁNIONĄ KARTĘ Z ĆWICZENIA 2A]</b></pre></div>
+<div class="notes"><textarea data-notes placeholder="Moja gotowa instrukcja systemowa (do Modułu 3): …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
+</div></article>
+<div class="tabs tabs-bottom" role="tablist"><button class="tab" data-panel="p1"><span class="tn">Moduł 1</span><span class="tk">Czym są Agenci AI</span><span class="th">Teoria + mapa procesów</span></button><button class="tab" data-panel="p2"><span class="tn">Moduł 2</span><span class="tk">Projektowanie agenta</span><span class="th">Karta + instrukcja</span></button><button class="tab" data-panel="p3"><span class="tn">Moduł 3</span><span class="tk">Budowa agenta</span><span class="th">Gemini Gems (bezpłatnie)</span></button><button class="tab" data-panel="p4"><span class="tn">Moduł 4</span><span class="tk">Praca indywidualna</span><span class="th">Research + decyzje</span></button></div>
 </div>
-<div class="sched">
-<div class="schday"><span>DZIEŃ 2 — Automatyzacja i wdrożenia</span><span class="d">05.07.2026 (sobota) · 8h</span></div>
-<div class="schrow"><span class="tm">09:00–10:30</span><span class="nm"><b>Moduł 5:</b> Agenci AI w zespołach i organizacjach</span><span class="du">1:30</span></div>
-<div class="schrow br"><span class="tm">10:30–10:45</span><span class="nm">Przerwa</span><span class="du">0:15</span></div>
-<div class="schrow"><span class="tm">10:45–12:15</span><span class="nm"><b>Moduł 6:</b> Integracje i narzędzia no-code</span><span class="du">1:30</span></div>
-<div class="schrow br"><span class="tm">12:15–12:30</span><span class="nm">Przerwa</span><span class="du">0:15</span></div>
-<div class="schrow"><span class="tm">12:30–14:00</span><span class="nm"><b>Moduł 7:</b> Bezpieczeństwo, etyka i odpowiedzialność</span><span class="du">1:30</span></div>
-<div class="schrow br"><span class="tm">14:00–14:15</span><span class="nm">Przerwa</span><span class="du">0:15</span></div>
-<div class="schrow"><span class="tm">14:15–15:00</span><span class="nm"><b>Moduł 8:</b> Projekt końcowy — własny Cyfrowy Współpracownik</span><span class="du">0:45</span></div>
-<div class="schrow ev"><span class="tm">15:00–15:45</span><span class="nm"><b>Ewaluacja</b> — test online (próg 80%, do 5 podejść)</span><span class="du">0:45</span></div>
+<div class="panel" id="p3">
+<article class="cw" data-cw="Moduł3">
+<div class="cwh"><div class="cwm"><span class="cwn">Moduł 3</span><span class="cwmod">Budowa · Gemini Gems</span><span class="cwt">~1:30</span></div><span class="cwbadge">✓ Ukończone</span></div>
+<h2 class="cwtitle">Budowa Agenta AI krok po kroku</h2>
+<p class="cwgoal"><b>Cel:</b> Zbudujesz działającego agenta w Gemini Gems (bezpłatnie), dodasz mu wiedzę i przetestujesz go jak wymagający klient.</p>
+<div class="cwbody">
+<div class="teo"><h3>Narzędzie bazowe: Gemini Gems <span class='freetag'>bezpłatne</span></h3><p>Budujemy w <b>Gemini Gems</b> — wystarczy konto Google, bez żadnych opłat. Zasada budowy jest wszędzie taka sama, więc później przeniesiesz agenta gdzie chcesz.</p><ul><li><b>Gemini Gems</b> — bezpłatne, konto Google (używamy na szkoleniu)</li><li>Custom GPT — wymaga płatnego ChatGPT Plus</li><li>Projekty w Claude — pełnia w planie Pro</li></ul></div>
+<div class="teo"><h3>Kolejność budowy — zapamiętaj</h3><p>Ten sam porządek działa dla każdego narzędzia:</p><ul><li>1. Cel i zadania</li><li>2. Instrukcja i wiedza</li><li>3. Testowanie</li><li>4. Optymalizacja</li><li>5. Wdrożenie</li></ul></div>
+<div class="sec">Ćwiczenie 3A · Zbuduj Gema krok po kroku</div>
+<label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://gemini.google.com' target='_blank'>gemini.google.com</a> i zaloguj się kontem Google (bezpłatnie).</span></label><label class="step"><input type="checkbox" data-step><span>W menu po lewej otwórz <b>Gems</b> → <b>New Gem</b> (Nowy Gem).</span></label><label class="step"><input type="checkbox" data-step><span>W polu <b>Instructions</b> wklej swoją instrukcję systemową z Modułu 2.</span></label><label class="step"><input type="checkbox" data-step><span>W polu wiedzy / w instrukcji wklej informacje o firmie (użyj przykładowej wiedzy poniżej, jeśli nie masz własnej).</span></label><label class="step"><input type="checkbox" data-step><span>Kliknij <b>Save</b> → przetestuj agenta w podglądzie po prawej stronie.</span></label>
+<div class="prom ex"><div class="pbar"><span>📋 Przykładowa wiedza — wklej, jeśli nie masz własnej</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>FAQ sklepu „Świece i Ozdoby”:
+- Czas realizacji: 2–4 dni robocze.
+- Wysyłka: InPost Paczkomat 12 zł, kurier 15 zł, pobranie +5 zł.
+- Zwroty: 14 dni, produkt nieużywany.
+- Płatności: BLIK, przelew, za pobraniem.
+- Personalizacja: świeca z własnym napisem +10 zł, +2 dni.</pre></div>
+<div class="sec">Ćwiczenie 3B · Testuj jak klient, nie jak autor</div>
+<label class="step"><input type="checkbox" data-step><span>Skopiuj prompt „Tester agenta” i wygeneruj 6 pytań (2 typowe, 2 trudne, 2 podchwytliwe).</span></label><label class="step"><input type="checkbox" data-step><span>Zadaj je swojemu Gemowi po kolei.</span></label><label class="step"><input type="checkbox" data-step><span>Sprawdź: czy nie zmyśla? czy trzyma granice (np. rabaty)?</span></label><label class="step"><input type="checkbox" data-step><span>Po każdej rundzie wprowadź <b>jedną</b> poprawkę w instrukcji → testuj ponownie.</span></label>
+<div class="prom"><div class="pbar"><span>Prompt — Tester agenta</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Wciel się w wymagającego klienta mojego agenta i wygeneruj 6 pytań testowych:
+- 2 typowe (codzienne pytania klienta)
+- 2 trudne (nietypowe sytuacje, szczegóły)
+- 2 podchwytliwe (czy agent nie zmyśla i trzyma granice — np. prośba o duży rabat, pytanie spoza tematu)
+
+Do każdego pytania dopisz, jakiej dobrej odpowiedzi oczekuję.
+Kontekst agenta: <b>[KRÓTKI OPIS TWOJEGO AGENTA]</b></pre></div>
+<div class="hint"><b>Cel Modułu 3:</b> wychodzisz z działającym agentem, który poprawnie odpowiada na typowe pytania i nie „wychodzi z roli”.</div>
+<div class="tgrid"><a class="tool" href="https://gemini.google.com" target="_blank"><b>Gemini Gems<span class="freetag">bezpłatne</span></b><span class="tu">gemini.google.com</span><p>Budujemy tutaj — konto Google</p></a><a class="tool" href="https://accounts.google.com" target="_blank"><b>Google (konto)<span class="freetag">bezpłatne</span></b><span class="tu">accounts.google.com</span><p>Załóż bezpłatnie, jeśli nie masz</p></a></div>
+<div class="notes"><textarea data-notes placeholder="Nazwa mojego Gema · co poprawiłem po testach: …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
+</div></article>
+<div class="tabs tabs-bottom" role="tablist"><button class="tab" data-panel="p1"><span class="tn">Moduł 1</span><span class="tk">Czym są Agenci AI</span><span class="th">Teoria + mapa procesów</span></button><button class="tab" data-panel="p2"><span class="tn">Moduł 2</span><span class="tk">Projektowanie agenta</span><span class="th">Karta + instrukcja</span></button><button class="tab" data-panel="p3"><span class="tn">Moduł 3</span><span class="tk">Budowa agenta</span><span class="th">Gemini Gems (bezpłatnie)</span></button><button class="tab" data-panel="p4"><span class="tn">Moduł 4</span><span class="tk">Praca indywidualna</span><span class="th">Research + decyzje</span></button></div>
 </div>
-<div class="tabs tabs-bottom" role="tablist"><button class="tab on" data-panel="p1"><span class="tn">Dzień 1</span><span class="tk">Ćwiczenia — Moduły 1–4</span><span class="th">Projektowanie i budowa</span></button><button class="tab" data-panel="p2"><span class="tn">Harmonogram</span><span class="tk">Plan 2 dni</span><span class="th">Godziny · przerwy</span></button></div>
+<div class="panel" id="p4">
+<article class="cw" data-cw="Moduł4">
+<div class="cwh"><div class="cwm"><span class="cwn">Moduł 4</span><span class="cwmod">Praca indywidualna</span><span class="cwt">~1:30</span></div><span class="cwbadge">✓ Ukończone</span></div>
+<h2 class="cwtitle">Agenci AI w pracy indywidualnej</h2>
+<p class="cwgoal"><b>Cel:</b> Uruchomisz 4 bezpłatne narzędzia-agentów do codziennej pracy: research, analiza źródeł, wsparcie decyzji i administracja.</p>
+<div class="cwbody">
+<div class="teo"><h3>Cztery zastosowania na co dzień</h3><p>Każde z tych narzędzi jest bezpłatne i gotowe do użycia od zaraz:</p><ul><li><b>NotebookLM</b> — agent-researcher: wrzucasz źródła, dostajesz analizy oparte wyłącznie na nich</li><li><b>Perplexity</b> — szybki research rynku z podanymi źródłami</li><li><b>Wsparcie decyzyjne</b> — agent-doradca: argumenty za/przeciw, ryzyka, rekomendacja</li><li><b>Automatyzacja administracji</b> — szkice maili, plan tygodnia, checklisty</li></ul></div>
+<div class="sec">Ćwiczenie 4A · Research z Perplexity</div>
+<label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://perplexity.ai' target='_blank'>perplexity.ai</a> (bez logowania też działa).</span></label><label class="step"><input type="checkbox" data-step><span>Wklej prompt research (uzupełnij temat) i wyślij.</span></label><label class="step"><input type="checkbox" data-step><span>Sprawdź źródła pod odpowiedzią — zaznacz, co wymaga weryfikacji.</span></label>
+<div class="prom"><div class="pbar"><span>Prompt — Szybki research</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Zrób szybki research na temat: <b>[TEMAT / PYTANIE]</b>.
+Podaj: 5 kluczowych faktów, 3 wnioski praktyczne dla mojej pracy i wskaż źródła.
+Zaznacz, co wymaga dodatkowej weryfikacji.</pre></div>
+<div class="sec">Ćwiczenie 4B · Analiza źródeł w NotebookLM</div>
+<label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://notebooklm.google.com' target='_blank'>notebooklm.google.com</a> (konto Google, bezpłatnie).</span></label><label class="step"><input type="checkbox" data-step><span>Kliknij <b>New</b> → dodaj źródło: wklej tekst (użyj przykładu poniżej) albo wgraj PDF/link.</span></label><label class="step"><input type="checkbox" data-step><span>Zadaj pytania do źródła — NotebookLM odpowiada wyłącznie na jego podstawie (mniej halucynacji).</span></label>
+<div class="prom ex"><div class="pbar"><span>📋 Przykładowe źródło — wklej do NotebookLM</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Notatka: Zmiana godzin wysyłki. Od 1 lipca paczki nadajemy do godz. 14:00 (wcześniej 12:00). Zamówienia po 14:00 realizujemy następnego dnia roboczego. W piątki ostatnia wysyłka o 12:00. Koszt InPost bez zmian: 12 zł. Dla zamówień powyżej 200 zł wysyłka gratis.</pre></div>
+<div class="sec">Ćwiczenie 4C · Wsparcie decyzji i administracja</div>
+<label class="step"><input type="checkbox" data-step><span>Użyj promptu „Doradca” do realnego dylematu (albo przykładu poniżej).</span></label><label class="step"><input type="checkbox" data-step><span>Użyj promptu „Administracja”, aby wygenerować mail, plan tygodnia lub checklistę.</span></label>
+<div class="prom"><div class="pbar"><span>Prompt — Doradca (wsparcie decyzji)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jesteś doradcą. Mam decyzję: <b>[OPISZ DECYZJĘ / DYLEMAT]</b>.
+Przedstaw: argumenty ZA, argumenty PRZECIW, 3 główne ryzyka i rekomendację warunkową (co zrobić i pod jakim warunkiem). Bądź konkretny.</pre></div>
+<div class="prom"><div class="pbar"><span>Prompt — Administracja</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Przygotuj:
+1) szkic uprzejmego maila w sprawie <b>[TEMAT]</b>,
+2) plan mojego tygodnia na podstawie zadań: <b>[WKLEJ 5–7 ZADAŃ]</b>,
+3) checklistę do procesu: <b>[NAZWA PROCESU]</b>.
+Po polsku, zwięźle, gotowe do użycia.</pre></div>
+<div class="prom ex"><div class="pbar"><span>📋 Przykładowy dylemat do promptu „Doradca”</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Czy wprowadzić darmową wysyłkę od 150 zł? Średnia wartość zamówienia to teraz 120 zł, marża ok. 40%, koszt wysyłki 12 zł. Chcę zwiększyć wartość koszyka, ale boję się o marżę.</pre></div>
+<div class="teo"><h3>Po dzisiejszym dniu wiesz i umiesz</h3><p>Podsumowanie Dnia 1:</p><ul><li>Wiesz, czym agent różni się od chatbota</li><li>Umiesz dobrać typ agenta do zadania</li><li>Masz Kartę Agenta, instrukcję systemową i działającego agenta w Gemini Gems</li><li><b>Jutro:</b> agenci w procesach firmy, integracje Make i Zapier, bezpieczeństwo oraz projekt końcowy. Do zobaczenia o 09:00!</li></ul></div>
+<div class="tgrid"><a class="tool" href="https://notebooklm.google.com" target="_blank"><b>NotebookLM<span class="freetag">bezpłatne</span></b><span class="tu">notebooklm.google.com</span><p>Analiza Twoich źródeł</p></a><a class="tool" href="https://perplexity.ai" target="_blank"><b>Perplexity<span class="freetag">bezpłatne</span></b><span class="tu">perplexity.ai</span><p>Research ze źródłami</p></a><a class="tool" href="https://gemini.google.com" target="_blank"><b>Gemini<span class="freetag">bezpłatne</span></b><span class="tu">gemini.google.com</span><p>Doradca, administracja</p></a><a class="tool" href="https://claude.ai" target="_blank"><b>Claude<span class="freetag">bezpłatne</span></b><span class="tu">claude.ai</span><p>Dłuższe analizy tekstu</p></a></div>
+<div class="notes"><textarea data-notes placeholder="Które narzędzie wdrożę u siebie w pierwszej kolejności: …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
+</div></article>
+<div class="tabs tabs-bottom" role="tablist"><button class="tab" data-panel="p1"><span class="tn">Moduł 1</span><span class="tk">Czym są Agenci AI</span><span class="th">Teoria + mapa procesów</span></button><button class="tab" data-panel="p2"><span class="tn">Moduł 2</span><span class="tk">Projektowanie agenta</span><span class="th">Karta + instrukcja</span></button><button class="tab" data-panel="p3"><span class="tn">Moduł 3</span><span class="tk">Budowa agenta</span><span class="th">Gemini Gems (bezpłatnie)</span></button><button class="tab" data-panel="p4"><span class="tn">Moduł 4</span><span class="tk">Praca indywidualna</span><span class="th">Research + decyzje</span></button></div>
 </div>
 
 <div class="actions">
@@ -473,38 +488,40 @@ Ton: ludzki, konkretny, bez korporacyjnych zwrotów. Dodaj jasne CTA.</pre></div
 </div>
 </main>
 
-<footer>
-  <div class="fi">
-    <span><b>Energia dla Biznesu</b> · Cyfrowi Współpracownicy: Agenci AI</span>
-    <span>Prowadzący: <b>Matsvei Dzmitryieu</b> · <span class="o">⚡</span> 2026</span>
-  </div>
-</footer>
+<footer><div class="fi">
+  <span><b>Energia dla Biznesu</b> · Cyfrowi Współpracownicy: Agenci AI · Dzień 1</span>
+  <span>Prowadzący: <b>Matsvei Dzmitryieu</b> · <span class="o">⚡</span> 2026</span>
+</div></footer>
 
 <script>
 (function(){
 "use strict";
-var PFX="edb-agenci-";
+var PFX="edb-agenci1-";
 var mem={};
 var S={get:function(k){try{return localStorage.getItem(k)}catch(e){return mem[k]||null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){mem[k]=v}},del:function(k){try{localStorage.removeItem(k)}catch(e){delete mem[k]}}};
 
-/* GLOSSARY */
-var gBtn=document.getElementById("gBtn"),gPanel=document.getElementById("gPanel"),gClose=document.getElementById("gClose");
-function openG(){gPanel.classList.add("open");gBtn.style.display="none"}
-function closeG(){gPanel.classList.remove("open");gBtn.style.display="flex"}
-gBtn.addEventListener("click",openG);gClose.addEventListener("click",closeG);
-document.addEventListener("keydown",function(e){if(e.key==="Escape")closeG()});
-Array.prototype.slice.call(document.querySelectorAll(".gTabBtn")).forEach(function(btn){btn.addEventListener("click",function(){Array.prototype.slice.call(document.querySelectorAll(".gTabBtn")).forEach(function(b){b.classList.remove("on")});Array.prototype.slice.call(document.querySelectorAll(".gContent")).forEach(function(c){c.classList.remove("on")});btn.classList.add("on");document.getElementById("gc-"+btn.dataset.gtab).classList.add("on")})});
+/* SIDE PANEL */
+var gBtn=document.getElementById("gBtn"),hBtn=document.getElementById("hBtn"),gPanel=document.getElementById("gPanel"),gClose=document.getElementById("gClose");
+function showBtns(v){gBtn.style.display=v?"flex":"none";hBtn.style.display=v?"flex":"none";}
+function actTab(name){Array.prototype.slice.call(document.querySelectorAll(".gTabBtn")).forEach(function(b){b.classList.toggle("on",b.dataset.gtab===name)});Array.prototype.slice.call(document.querySelectorAll(".gContent")).forEach(function(c){c.classList.remove("on")});document.getElementById("gc-"+name).classList.add("on");}
+function openPanel(tab){gPanel.classList.add("open");showBtns(false);if(tab)actTab(tab);}
+function closePanel(){gPanel.classList.remove("open");showBtns(true);}
+gBtn.addEventListener("click",function(){openPanel("slownik")});
+hBtn.addEventListener("click",function(){openPanel("harmonogram")});
+gClose.addEventListener("click",closePanel);
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closePanel()});
+Array.prototype.slice.call(document.querySelectorAll(".gTabBtn")).forEach(function(btn){btn.addEventListener("click",function(){actTab(btn.dataset.gtab)})});
 
 /* SEARCH */
 var gSrch=document.getElementById("gSearch"),gNoRes=document.getElementById("gNoRes"),gQEl=document.getElementById("gQ");
-if(gSrch){gSrch.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var items=Array.prototype.slice.call(document.querySelectorAll(".gItem"));var anyVis=false;items.forEach(function(item){var m=!q||item.textContent.toLowerCase().indexOf(q)!==-1;item.style.display=m?"":"none";if(m)anyVis=true});Array.prototype.slice.call(document.querySelectorAll(".gSec")).forEach(function(sec){if(!q){sec.style.display="";return}var el=sec.nextElementSibling,vis=false;while(el&&!el.classList.contains("gSec")){if(el.style.display!=="none")vis=true;el=el.nextElementSibling}sec.style.display=vis?"":"none"});if(gNoRes&&gQEl){gQEl.textContent=q;gNoRes.style.display=(!anyVis&&q)?"block":"none"}})}
+if(gSrch){gSrch.addEventListener("input",function(){var q=this.value.toLowerCase().trim();var items=Array.prototype.slice.call(document.querySelectorAll(".gItem"));var anyVis=false;items.forEach(function(item){var m=!q||item.textContent.toLowerCase().indexOf(q)!==-1;item.style.display=m?"":"none";if(m)anyVis=true});Array.prototype.slice.call(document.querySelectorAll("#gc-slownik .gSec")).forEach(function(sec){if(!q){sec.style.display="";return}var el=sec.nextElementSibling,vis=false;while(el&&!el.classList.contains("gSec")){if(el.style.display!=="none")vis=true;el=el.nextElementSibling}sec.style.display=vis?"":"none"});if(gNoRes&&gQEl){gQEl.textContent=q;gNoRes.style.display=(!anyVis&&q)?"block":"none"}})}
 
-/* QUIZ (losowana kolejność odpowiedzi) */
-var QUIZ=[{"q": "Czym jest Agent AI?", "opts": ["Programem, który autonomicznie realizuje cel: planuje kroki, podejmuje decyzje i wykonuje zadania, korzystając z narzędzi", "Zwykłym chatbotem odpowiadającym według sztywnego skryptu", "Wyszukiwarką internetową z funkcją czatu", "Programem do edycji grafiki z AI"], "c": 0}, {"q": "Kluczowa różnica między Agentem AI a klasycznym chatbotem?", "opts": ["Agent samodzielnie planuje i wykonuje działania prowadzące do celu, a chatbot odpowiada na pojedyncze pytania", "Chatbot jest zawsze płatny, a agent darmowy", "Agent działa tylko offline, a chatbot tylko online", "Nie ma różnicy — to synonimy"], "c": 0}, {"q": "Która cecha NIE jest typowa dla systemu agentowego?", "opts": ["Konieczność ręcznego zatwierdzania każdego pojedynczego kroku", "Autonomia w realizacji zadań", "Adaptacyjność do zmieniających się warunków", "Zdolność do współpracy z innymi agentami"], "c": 0}, {"q": "Trzy typowe cechy systemu agentowego to:", "opts": ["Autonomia, adaptacyjność i zdolność do współpracy z innymi agentami", "Szybkość, kolorowy interfejs i niska cena", "Praca offline, brak pamięci i losowość", "Ręczne sterowanie, brak celu i jednorazowość"], "c": 0}, {"q": "Agent reaktywny to agent, który:", "opts": ["Reaguje na bieżące zdarzenia według prostych reguł, bez długoterminowego planowania", "Tworzy długoterminowe plany i analizuje wiele scenariuszy", "Zawsze łączy planowanie strategiczne z uczeniem maszynowym", "Działa tylko raz w tygodniu o stałej porze"], "c": 0}, {"q": "Agent deliberatywny sprawdzi się, gdy zadanie wymaga:", "opts": ["Planowania i analizy wielu kroków przed podjęciem działania", "Natychmiastowej, prostej reakcji na jedno zdarzenie", "Wyłącznie generowania obrazów", "Działania bez określonego celu"], "c": 0}, {"q": "Agent hybrydowy to:", "opts": ["Agent łączący szybkie reagowanie na zdarzenia z planowaniem i analizą", "Agent działający wyłącznie na telefonie", "Chatbot z awatarem wideo", "Program antywirusowy z AI"], "c": 0}, {"q": "Który proces najlepiej nadaje się do automatyzacji przez Agenta AI?", "opts": ["Powtarzalna obsługa zapytań klientów i przygotowywanie wstępnych odpowiedzi", "Jednorazowa, kreatywna decyzja strategiczna właściciela", "Fizyczny montaż produktu u klienta", "Osobiste spotkanie negocjacyjne z kontrahentem"], "c": 0}, {"q": "Jakie korzyści daje wdrożenie Agentów AI w pracy?", "opts": ["Oszczędność czasu, redukcję błędów i wsparcie w lepszych decyzjach", "Gwarancję zysku bez wykonywania pracy", "Całkowite zastąpienie wszystkich pracowników od pierwszego dnia", "Żadnych realnych korzyści — to moda"], "c": 0}, {"q": "Od czego zacząć projektowanie Agenta AI?", "opts": ["Od określenia celu i zadań agenta oraz zakresu jego odpowiedzialności", "Od wyboru koloru interfejsu", "Od zakupu najdroższego komputera", "Od natychmiastowej publikacji agenta w internecie"], "c": 0}, {"q": "Co powinna zawierać dobra instrukcja (prompt systemowy) agenta?", "opts": ["Rolę, cel, kontekst i wiedzę, zasady działania, ograniczenia oraz format odpowiedzi", "Wyłącznie powitanie dla użytkownika", "Tylko nazwę firmy", "Losowy zestaw słów kluczowych"], "c": 0}, {"q": "Co oznacza ustalenie priorytetów i zasad działania agenta?", "opts": ["Określenie, które zadania agent wykonuje najpierw i jakich granic nie może przekraczać", "Ustawienie tapety na pulpicie", "Trwałe wyłączenie agenta", "Usunięcie wszystkich instrukcji z konfiguracji"], "c": 0}, {"q": "Prawidłowa kolejność kroków przy budowie agenta to:", "opts": ["Cel i zadania -> instrukcja i wiedza -> testowanie -> optymalizacja -> wdrożenie", "Wdrożenie -> cel -> testowanie -> instrukcja", "Testowanie -> wdrożenie -> cel -> wiedza", "Optymalizacja -> wdrożenie -> cel -> testowanie"], "c": 0}, {"q": "Które zadania biurowe można delegować Agentowi AI?", "opts": ["Przygotowywanie szkiców e-maili, podsumowań, raportów i analiz danych", "Podpisywanie umów w imieniu firmy bez wiedzy właściciela", "Fizyczne archiwizowanie papierowych dokumentów", "Naprawę uszkodzonego sprzętu komputerowego"], "c": 0}, {"q": "Zapier i Make to narzędzia, które służą do:", "opts": ["Łączenia aplikacji i automatyzacji przepływów pracy bez programowania (no-code)", "Profesjonalnego montażu wideo", "Projektowania logotypów", "Prowadzenia wideokonferencji"], "c": 0}, {"q": "Typowy scenariusz automatyzacji no-code składa się z:", "opts": ["Wyzwalacza (trigger) i następujących po nim akcji w połączonych aplikacjach", "Wyłącznie jednego przycisku Start", "Kodu w języku C++ pisanego ręcznie", "Drukowania i skanowania dokumentów"], "c": 0}, {"q": "Zasada human-in-the-loop oznacza, że:", "opts": ["Człowiek nadzoruje pracę agenta i zatwierdza kluczowe decyzje przed realizacją", "Agent działa całkowicie bez nadzoru we wszystkich sprawach", "Człowiek nie ma dostępu do wyników pracy agenta", "Agent samodzielnie zatrudnia nowych pracowników"], "c": 0}, {"q": "Która praktyka jest zgodna z etyką AI i bezpieczeństwem danych?", "opts": ["Nieumieszczanie danych osobowych klientów w wiedzy agenta i weryfikowanie odpowiedzi przed wysłaniem", "Wklejanie pełnych danych osobowych klientów do publicznych narzędzi AI", "Bezkrytyczne ufanie każdej odpowiedzi agenta", "Udostępnianie firmowych haseł agentowi publicznemu"], "c": 0}];
+/* QUIZ */
+var QUIZ=[{"q": "Czym jest Agent AI?", "opts": ["Programem, który samodzielnie realizuje cel: planuje kroki, podejmuje decyzje i korzysta z narzędzi", "Zwykłym chatbotem odpowiadającym według sztywnego skryptu", "Wyszukiwarką internetową z funkcją czatu", "Programem do edycji grafiki z AI"], "c": 0}, {"q": "Kluczowa różnica między Agentem AI a chatbotem?", "opts": ["Agent sam planuje i wykonuje działania prowadzące do celu, a chatbot odpowiada na pojedyncze pytania", "Chatbot jest zawsze płatny, a agent darmowy", "Agent działa tylko offline, a chatbot tylko online", "Nie ma różnicy — to synonimy"], "c": 0}, {"q": "Która cecha NIE jest typowa dla systemu agentowego?", "opts": ["Konieczność ręcznego zatwierdzania każdego pojedynczego kroku", "Autonomia w realizacji zadań", "Adaptacyjność do zmieniających się warunków", "Zdolność do współpracy z innymi agentami"], "c": 0}, {"q": "Trzy typowe cechy systemu agentowego to:", "opts": ["Autonomia, adaptacyjność i zdolność do współpracy", "Szybkość, kolorowy interfejs i niska cena", "Praca offline, brak pamięci i losowość", "Ręczne sterowanie, brak celu i jednorazowość"], "c": 0}, {"q": "Agent reaktywny to agent, który:", "opts": ["Reaguje na zdarzenia według prostych reguł, bez długoterminowego planowania", "Tworzy długoterminowe plany i analizuje wiele scenariuszy", "Zawsze łączy planowanie strategiczne z uczeniem maszynowym", "Działa tylko raz w tygodniu o stałej porze"], "c": 0}, {"q": "Agent deliberatywny sprawdzi się, gdy zadanie wymaga:", "opts": ["Planowania i analizy wielu kroków przed działaniem", "Natychmiastowej, prostej reakcji na jedno zdarzenie", "Wyłącznie generowania obrazów", "Działania bez określonego celu"], "c": 0}, {"q": "Agent hybrydowy to:", "opts": ["Agent łączący szybką reakcję na zdarzenia z planowaniem i analizą", "Agent działający wyłącznie na telefonie", "Chatbot z awatarem wideo", "Program antywirusowy z AI"], "c": 0}, {"q": "Który proces najlepiej nadaje się do automatyzacji przez Agenta AI?", "opts": ["Powtarzalna obsługa zapytań klientów i wstępne odpowiedzi", "Jednorazowa, kreatywna decyzja strategiczna właściciela", "Fizyczny montaż produktu u klienta", "Osobiste spotkanie negocjacyjne z kontrahentem"], "c": 0}, {"q": "Jakie korzyści daje wdrożenie Agentów AI w pracy?", "opts": ["Oszczędność czasu, redukcję błędów i wsparcie w lepszych decyzjach", "Gwarancję zysku bez wykonywania pracy", "Całkowite zastąpienie wszystkich pracowników od pierwszego dnia", "Żadnych realnych korzyści — to moda"], "c": 0}, {"q": "Od czego zacząć projektowanie Agenta AI?", "opts": ["Od określenia celu i zadań agenta oraz zakresu odpowiedzialności", "Od wyboru koloru interfejsu", "Od zakupu najdroższego komputera", "Od natychmiastowej publikacji agenta w internecie"], "c": 0}, {"q": "Co powinna zawierać dobra instrukcja systemowa agenta?", "opts": ["Rolę, cel, kontekst i wiedzę, zasady, granice oraz format odpowiedzi", "Wyłącznie powitanie dla użytkownika", "Tylko nazwę firmy", "Losowy zestaw słów kluczowych"], "c": 0}, {"q": "Co oznacza ustalenie priorytetów i zasad działania agenta?", "opts": ["Określenie, które zadania agent wykonuje najpierw i jakich granic nie przekracza", "Ustawienie tapety na pulpicie", "Trwałe wyłączenie agenta", "Usunięcie wszystkich instrukcji z konfiguracji"], "c": 0}, {"q": "Prawidłowa kolejność kroków przy budowie agenta to:", "opts": ["Cel i zadania -> instrukcja i wiedza -> testowanie -> optymalizacja -> wdrożenie", "Wdrożenie -> cel -> testowanie -> instrukcja", "Testowanie -> wdrożenie -> cel -> wiedza", "Optymalizacja -> wdrożenie -> cel -> testowanie"], "c": 0}, {"q": "Które zadania biurowe można delegować Agentowi AI?", "opts": ["Szkice e-maili, podsumowań, raportów i analiz danych", "Podpisywanie umów w imieniu firmy bez wiedzy właściciela", "Fizyczne archiwizowanie papierowych dokumentów", "Naprawę uszkodzonego sprzętu komputerowego"], "c": 0}, {"q": "Zapier i Make to narzędzia, które służą do:", "opts": ["Łączenia aplikacji i automatyzacji przepływów pracy bez programowania (no-code)", "Profesjonalnego montażu wideo", "Projektowania logotypów", "Prowadzenia wideokonferencji"], "c": 0}, {"q": "Typowy scenariusz automatyzacji no-code składa się z:", "opts": ["Wyzwalacza (trigger) i następujących po nim akcji w aplikacjach", "Wyłącznie jednego przycisku Start", "Kodu w języku C++ pisanego ręcznie", "Drukowania i skanowania dokumentów"], "c": 0}, {"q": "Zasada human-in-the-loop oznacza, że:", "opts": ["Człowiek nadzoruje agenta i zatwierdza kluczowe decyzje przed realizacją", "Agent działa całkowicie bez nadzoru we wszystkich sprawach", "Człowiek nie ma dostępu do wyników pracy agenta", "Agent samodzielnie zatrudnia pracowników"], "c": 0}, {"q": "Która praktyka jest zgodna z etyką AI i bezpieczeństwem danych?", "opts": ["Nieumieszczanie danych osobowych klientów w wiedzy agenta i weryfikowanie odpowiedzi", "Wklejanie pełnych danych osobowych klientów do publicznych narzędzi AI", "Bezkrytyczne ufanie każdej odpowiedzi agenta", "Udostępnianie firmowych haseł agentowi publicznemu"], "c": 0}];
 function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 var qOrder=[],qState={};
-function buildOrder(){qOrder=QUIZ.map(function(item){var arr=item.opts.map(function(t,i){return{t:t,correct:i===item.c}});return shuffle(arr.slice())})}
-function renderQuiz(){var box=document.getElementById("quizContainer");if(!box)return;var html="";QUIZ.forEach(function(item,qi){html+='<div class="qItem" data-qi="'+qi+'"><div class="qNum">Pytanie '+(qi+1)+' / '+QUIZ.length+'</div><div class="qText">'+item.q+'</div><div class="qOpts">';qOrder[qi].forEach(function(o,oi){html+='<button class="qOpt" data-qi="'+qi+'" data-oi="'+oi+'" data-c="'+(o.correct?1:0)+'">'+o.t+'</button>'});html+='</div></div>'});box.innerHTML=html;Array.prototype.slice.call(box.querySelectorAll(".qOpt")).forEach(function(btn){btn.addEventListener("click",function(){var qi=parseInt(btn.dataset.qi);if(qState[qi]!==undefined)return;var chosenCorrect=btn.dataset.c==="1";qState[qi]=chosenCorrect;var allOpts=box.querySelectorAll('[data-qi="'+qi+'"].qOpt');Array.prototype.slice.call(allOpts).forEach(function(b){b.classList.add("disabled");if(b.dataset.c==="1")b.classList.add("correct");else if(b===btn)b.classList.add("wrong")});updateQScore()})})}
+function buildOrder(){qOrder=QUIZ.map(function(item){return shuffle(item.opts.map(function(t,i){return{t:t,correct:i===item.c}}))})}
+function renderQuiz(){var box=document.getElementById("quizContainer");if(!box)return;var html="";QUIZ.forEach(function(item,qi){html+='<div class="qItem" data-qi="'+qi+'"><div class="qNum">Pytanie '+(qi+1)+' / '+QUIZ.length+'</div><div class="qText">'+item.q+'</div><div class="qOpts">';qOrder[qi].forEach(function(o,oi){html+='<button class="qOpt" data-qi="'+qi+'" data-oi="'+oi+'" data-c="'+(o.correct?1:0)+'">'+o.t+'</button>'});html+='</div></div>'});box.innerHTML=html;Array.prototype.slice.call(box.querySelectorAll(".qOpt")).forEach(function(btn){btn.addEventListener("click",function(){var qi=parseInt(btn.dataset.qi);if(qState[qi]!==undefined)return;qState[qi]=btn.dataset.c==="1";Array.prototype.slice.call(box.querySelectorAll('[data-qi="'+qi+'"].qOpt')).forEach(function(b){b.classList.add("disabled");if(b.dataset.c==="1")b.classList.add("correct");else if(b===btn)b.classList.add("wrong")});updateQScore()})})}
 function updateQScore(){var answered=Object.keys(qState).length,correct=0;Object.keys(qState).forEach(function(qi){if(qState[qi])correct++});var el=document.getElementById("qScore");if(el){el.textContent="Wynik: "+correct+" / "+answered+" poprawnych";el.classList.toggle("show",answered>0);var pass=correct>=Math.ceil(QUIZ.length*0.8);el.style.background=answered===QUIZ.length?(pass?"#e9f1ec":"#fde8e8"):"";el.style.color=answered===QUIZ.length?(pass?"var(--done)":"#b3361c"):""}}
 document.getElementById("qReset").addEventListener("click",function(){qState={};buildOrder();renderQuiz();updateQScore()});
 buildOrder();renderQuiz();
@@ -527,7 +544,7 @@ notes.forEach(function(n,i){var sv=S.get(PFX+"n"+i);if(sv)n.value=sv;var badge=n
 document.querySelectorAll("[data-copy]").forEach(function(btn){btn.addEventListener("click",function(){var txt=btn.closest(".prom").querySelector("pre").textContent.trim();function ok(){var o=btn.textContent;btn.textContent="✓ Skopiowano";btn.classList.add("cp");setTimeout(function(){btn.textContent=o;btn.classList.remove("cp")},1600)}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok,lg)}else{lg()}function lg(){var ta=document.createElement("textarea");ta.value=txt;ta.style.cssText="position:fixed;opacity:0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");ok()}catch(e){}document.body.removeChild(ta)}})});
 
 /* DOWNLOAD */
-var nt=["M1 — zadania do automatyzacji", "M2 — instrukcja systemowa agenta", "M3 — mój agent i błędy", "M4 — praca indywidualna"];
+var nt=["M1 — wybrany proces (projekt)", "M2 — instrukcja systemowa agenta", "M3 — mój Gem po testach", "M4 — narzędzie do wdrożenia"];
 document.getElementById("dlBtn").addEventListener("click",function(){var out="CYFROWI WSPÓŁPRACOWNICY: AGENCI AI — Dzień 1 — notatki\nEnergia dla Biznesu · "+new Date().toLocaleDateString("pl-PL")+"\n\n";notes.forEach(function(n,i){out+="=== "+(nt[i]||"Notatki "+(i+1))+" ===\n"+(n.value.trim()||"(pusto)")+"\n\n"});var blob=new Blob([out],{type:"text/plain;charset=utf-8"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="notatki-agenci-ai-dzien-1.txt";document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(a.href)});
 
 /* RESET */
