@@ -212,6 +212,10 @@ footer{background:var(--ink);color:#9aa39a;margin-top:30px;padding:20px 24px;fon
 /* FREE tag */
 .freetag{display:inline-block;font-family:'Archivo',sans-serif;font-weight:800;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--done);padding:2px 7px;border-radius:99px;margin-left:6px;vertical-align:middle}
 .paidtag{background:#b98a3e}
+/* TOOL LINE (w czym pracujesz) */
+.uses{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:#3c443e;background:#eef5f0;border:1px solid #cfe3d6;border-radius:8px;padding:8px 12px;margin:12px 0 6px}
+.uses b{color:var(--green);font-family:'Archivo',sans-serif;font-weight:800;font-size:10px;letter-spacing:1.5px;text-transform:uppercase}
+.uses a{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500}
 /* SCHEDULE (in side panel) */
 .sched{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
 .schday{font-family:'Archivo',sans-serif;font-weight:800;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--green);padding:9px 13px}
@@ -365,7 +369,8 @@ footer{background:var(--ink);color:#9aa39a;margin-top:30px;padding:20px 24px;fon
 <div class="hint"><b>Zasada doboru:</b> prosty, powtarzalny problem → agent reaktywny. Złożony, wieloetapowy → deliberatywny lub hybrydowy.</div>
 <div class="teo"><h3>Gdzie agenci realnie pomagają</h3><p>Najczęściej automatyzowane procesy — i trzy korzyści, które warto zapamiętać:</p><ul><li>Obsługa zapytań klientów i wstępne wyceny</li><li>Research, analizy i raporty</li><li>Szkice e-maili, ofert i treści</li><li>Umawianie spotkań i przypomnienia</li><li>Porządkowanie danych</li><li><b>Korzyści:</b> ⏱ oszczędność czasu · ✅ mniej błędów · 💡 lepsze decyzje</li></ul></div>
 <div class="sec">Ćwiczenie 1A · Mapa procesów Twojej firmy</div>
-<label class="step"><input type="checkbox" data-step><span>Skopiuj prompt poniżej i uzupełnij <b>[ROLA]</b> oraz <b>[BRANŻA]</b> (albo użyj gotowego przykładu pod promptem).</span></label><label class="step"><input type="checkbox" data-step><span>Wklej go do <b>Gemini</b> (albo ChatGPT / Claude) i wyślij.</span></label><label class="step"><input type="checkbox" data-step><span>Przejrzyj listę zadań — przy każdym oceń korzyść i dobierz typ agenta.</span></label><label class="step"><input type="checkbox" data-step><span>Wybierz <b>JEDEN</b> proces (duża korzyść, małe ryzyko) — zapisz go w notatkach. To Twój projekt na całe szkolenie.</span></label>
+<div class="uses">🔧 <b>Narzędzie:</b> Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> <span class="freetag">bezpłatne</span></div>
+<label class="step"><input type="checkbox" data-step><span>Skopiuj prompt poniżej i uzupełnij <b>[ROLA]</b> oraz <b>[BRANŻA]</b> (albo użyj gotowego przykładu pod promptem).</span></label><label class="step"><input type="checkbox" data-step><span>Wklej go do <b>Gemini</b> (gemini.google.com) i wyślij.</span></label><label class="step"><input type="checkbox" data-step><span>Przejrzyj listę zadań — przy każdym oceń korzyść i dobierz typ agenta.</span></label><label class="step"><input type="checkbox" data-step><span>Wybierz <b>JEDEN</b> proces (duża korzyść, małe ryzyko) — zapisz go w notatkach. To Twój projekt na całe szkolenie.</span></label>
 <div class="prom"><div class="pbar"><span>Prompt — Mapa procesów</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jestem <b>[TWOJA ROLA]</b> w <b>[BRANŻA / OPIS FIRMY w 1 zdaniu]</b>.
 Pomóż mi znaleźć zadania, które może przejąć Agent AI.
 
@@ -378,7 +383,7 @@ Pomóż mi znaleźć zadania, które może przejąć Agent AI.
 3. Na końcu wskaż JEDEN najlepszy proces na start (duża korzyść, małe ryzyko).
 
 Pisz po polsku, konkretnie, w tabeli.</pre></div>
-<div class="prom ex"><div class="pbar"><span>📋 Przykład — użyj, jeśli nie chcesz opisywać swojej firmy</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jestem właścicielką małego sklepu internetowego z rękodziełem (świece sojowe i ozdoby). Sama obsługuję zamówienia, odpowiadam na wiadomości klientów na Instagramie i mailowo, pakuję paczki i prowadzę social media.</pre></div>
+<div class="prom ex"><div class="pbar"><span>📋 Przykład — użyj, jeśli nie chcesz opisywać swojej firmy</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Prowadzę firmę montującą pergole ogrodowe (aluminiowe pergole lamelowe z regulowanym dachem). Jeżdżę do klientów na pomiar na działkę, przygotowuję wyceny, montuję konstrukcje i serwisuję je po sezonie. Sam odpowiadam na wiadomości klientów na Instagramie i przez telefon, prowadzę też profil z postami i rolkami o zrealizowanych pergolach.</pre></div>
 <div class="tgrid"><a class="tool" href="https://gemini.google.com" target="_blank"><b>Gemini<span class="freetag">bezpłatne</span></b><span class="tu">gemini.google.com</span><p>Bez kodu, konto Google</p></a><a class="tool" href="https://chatgpt.com" target="_blank"><b>ChatGPT<span class="freetag">bezpłatne</span></b><span class="tu">chatgpt.com</span><p>Plan bezpłatny wystarczy</p></a><a class="tool" href="https://claude.ai" target="_blank"><b>Claude<span class="freetag">bezpłatne</span></b><span class="tu">claude.ai</span><p>Plan bezpłatny wystarczy</p></a></div>
 <div class="notes"><textarea data-notes placeholder="Mój wybrany proces (projekt na całe szkolenie): …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
 </div></article>
@@ -400,13 +405,14 @@ Pisz po polsku, konkretnie, w tabeli.</pre></div>
 3. KONTEKST I WIEDZA (co musi wiedzieć o firmie): …
 4. ZASADY (priorytety, ton, format): …
 5. GRANICE (czego nie robi, kiedy woła człowieka): …</pre></div>
-<div class="prom ex"><div class="pbar"><span>📋 Przykład wypełnionej Karty (sklep z rękodziełem)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>KARTA AGENTA
-1. CEL: Odpowiadać na pytania klientów o produkty i zamówienia, odciążając właścicielkę.
-2. ROLA: Konsultant obsługi klienta sklepu „Świece i Ozdoby”, pracujesz dla właścicielki i klientów.
-3. KONTEKST I WIEDZA: Świece sojowe (39–79 zł) i ozdoby handmade. Wysyłka InPost 12 zł, realizacja 2–4 dni. Płatności: BLIK, przelew.
-4. ZASADY: Ton ciepły, pomocny. Max 5 zdań. Zawsze proponuj konkretny produkt lub następny krok.
-5. GRANICE: Nie obiecujesz rabatów bez zgody właścicielki. Nie podajesz danych innych klientów. Reklamacje i zwroty pieniędzy → przekazujesz właścicielce.</pre></div>
+<div class="prom ex"><div class="pbar"><span>📋 Przykład wypełnionej Karty (firma montująca pergole ogrodowe)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>KARTA AGENTA
+1. CEL: Odpowiadać na pytania klientów o pergole, umawiać bezpłatne pomiary i przygotowywać wstępne wyceny, odciążając właściciela.
+2. ROLA: Konsultant firmy montującej pergole ogrodowe; pracujesz dla właściciela i klientów zainteresowanych pergolą.
+3. KONTEKST I WIEDZA: Montujemy aluminiowe pergole lamelowe (dach z regulowanych lameli). Cena orientacyjna od 1200 zł/m². Proces: pomiar na działce → wycena → montaż 1–2 dni → serwis posezonowy. Kolory RAL, dodatki: LED, ściany boczne, czujnik deszczu.
+4. ZASADY: Ton rzeczowy i konkretny. Max 5 zdań. Zawsze proponuj następny krok: bezpłatny pomiar lub wstępną wycenę.
+5. GRANICE: Nie podajesz sztywnej ceny końcowej bez pomiaru (tylko orientacyjną). Nie potwierdzasz terminu montażu bez właściciela. Reklamacje i serwis gwarancyjny → przekazujesz właścicielowi.</pre></div>
 <div class="sec">Ćwiczenie 2B · Generator instrukcji systemowej</div>
+<div class="uses">🔧 <b>Narzędzie:</b> Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> <span class="freetag">bezpłatne</span></div>
 <label class="step"><input type="checkbox" data-step><span>Skopiuj prompt „Generator instrukcji” poniżej.</span></label><label class="step"><input type="checkbox" data-step><span>Na jego końcu wklej swoją wypełnioną Kartę Agenta z ćwiczenia 2A.</span></label><label class="step"><input type="checkbox" data-step><span>Wyślij do Gemini / ChatGPT / Claude → dostaniesz gotową instrukcję.</span></label><label class="step"><input type="checkbox" data-step><span>Przetestuj ją na 3 przykładowych zapytaniach klienta i zapisz w notatkach — użyjesz jej w Module 3.</span></label>
 <div class="prom"><div class="pbar"><span>Prompt — Generator instrukcji</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jesteś ekspertem od projektowania agentów AI. Na podstawie mojej Karty Agenta napisz gotową INSTRUKCJĘ SYSTEMOWĄ (do wklejenia w Gemini Gems / Custom GPT / Claude).
 
@@ -428,14 +434,17 @@ Moja Karta Agenta:
 <div class="teo"><h3>Narzędzie bazowe: Gemini Gems <span class='freetag'>bezpłatne</span></h3><p>Budujemy w <b>Gemini Gems</b> — wystarczy konto Google, bez żadnych opłat. Zasada budowy jest wszędzie taka sama, więc później przeniesiesz agenta gdzie chcesz.</p><ul><li><b>Gemini Gems</b> — bezpłatne, konto Google (używamy na szkoleniu)</li><li>Custom GPT — wymaga płatnego ChatGPT Plus</li><li>Projekty w Claude — pełnia w planie Pro</li></ul></div>
 <div class="teo"><h3>Kolejność budowy — zapamiętaj</h3><p>Ten sam porządek działa dla każdego narzędzia:</p><ul><li>1. Cel i zadania</li><li>2. Instrukcja i wiedza</li><li>3. Testowanie</li><li>4. Optymalizacja</li><li>5. Wdrożenie</li></ul></div>
 <div class="sec">Ćwiczenie 3A · Zbuduj Gema krok po kroku</div>
+<div class="uses">🔧 <b>Narzędzie:</b> Gemini Gems — <a href="https://gemini.google.com/gems/view" target="_blank">gemini.google.com/gems/view</a> <span class="freetag">bezpłatne</span></div>
 <label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://gemini.google.com/gems/view' target='_blank'>gemini.google.com/gems/view</a> i zaloguj się kontem Google (bezpłatnie).</span></label><label class="step"><input type="checkbox" data-step><span>Kliknij <b>Nowy Gem</b> (New Gem), aby utworzyć agenta.</span></label><label class="step"><input type="checkbox" data-step><span>W polu <b>Instrukcje</b> (Instructions) wklej swoją instrukcję systemową z Modułu 2.</span></label><label class="step"><input type="checkbox" data-step><span>W polu wiedzy / w instrukcji wklej informacje o firmie (użyj przykładowej wiedzy poniżej, jeśli nie masz własnej).</span></label><label class="step"><input type="checkbox" data-step><span>Kliknij <b>Save</b> → przetestuj agenta w podglądzie po prawej stronie.</span></label>
-<div class="prom ex"><div class="pbar"><span>📋 Przykładowa wiedza — wklej, jeśli nie masz własnej</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>FAQ sklepu „Świece i Ozdoby”:
-- Czas realizacji: 2–4 dni robocze.
-- Wysyłka: InPost Paczkomat 12 zł, kurier 15 zł, pobranie +5 zł.
-- Zwroty: 14 dni, produkt nieużywany.
-- Płatności: BLIK, przelew, za pobraniem.
-- Personalizacja: świeca z własnym napisem +10 zł, +2 dni.</pre></div>
+<div class="prom ex"><div class="pbar"><span>📋 Przykładowa wiedza — wklej, jeśli nie masz własnej</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>FAQ — pergole ogrodowe:
+- Rodzaje: aluminiowe pergole lamelowe (dach z regulowanych lameli), pergole z markizą.
+- Wycena: po bezpłatnym pomiarze na działce; orientacyjnie od 1200 zł/m².
+- Proces: pomiar → projekt i wycena → montaż (zwykle 1–2 dni).
+- Kolory: dowolny RAL (antracyt najpopularniejszy).
+- Dodatki: oświetlenie LED, ściany boczne, zasłony, czujnik deszczu.
+- Gwarancja na konstrukcję oraz serwis posezonowy.</pre></div>
 <div class="sec">Ćwiczenie 3B · Testuj jak klient, nie jak autor</div>
+<div class="uses">🔧 <b>Narzędzie:</b> Twój Gem w Gemini — <a href="https://gemini.google.com/gems/view" target="_blank">gemini.google.com/gems/view</a> <span class="freetag">bezpłatne</span></div>
 <label class="step"><input type="checkbox" data-step><span>Skopiuj prompt „Tester agenta” i wygeneruj 6 pytań (2 typowe, 2 trudne, 2 podchwytliwe).</span></label><label class="step"><input type="checkbox" data-step><span>Zadaj je swojemu Gemowi po kolei.</span></label><label class="step"><input type="checkbox" data-step><span>Sprawdź: czy nie zmyśla? czy trzyma granice (np. rabaty)?</span></label><label class="step"><input type="checkbox" data-step><span>Po każdej rundzie wprowadź <b>jedną</b> poprawkę w instrukcji → testuj ponownie.</span></label>
 <div class="prom"><div class="pbar"><span>Prompt — Tester agenta</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Wciel się w wymagającego klienta mojego agenta i wygeneruj 6 pytań testowych:
 - 2 typowe (codzienne pytania klienta)
@@ -458,23 +467,33 @@ Kontekst agenta: <b>[KRÓTKI OPIS TWOJEGO AGENTA]</b></pre></div>
 <div class="cwbody">
 <div class="teo"><h3>Cztery zastosowania na co dzień</h3><p>Każde z tych narzędzi jest bezpłatne i gotowe do użycia od zaraz:</p><ul><li><b>NotebookLM</b> — agent-researcher: wrzucasz źródła, dostajesz analizy oparte wyłącznie na nich</li><li><b>Perplexity</b> — szybki research rynku z podanymi źródłami</li><li><b>Wsparcie decyzyjne</b> — agent-doradca: argumenty za/przeciw, ryzyka, rekomendacja</li><li><b>Automatyzacja administracji</b> — szkice maili, plan tygodnia, checklisty</li></ul></div>
 <div class="sec">Ćwiczenie 4A · Research z Perplexity</div>
-<label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://perplexity.ai' target='_blank'>perplexity.ai</a> (bez logowania też działa).</span></label><label class="step"><input type="checkbox" data-step><span>Wklej prompt research (uzupełnij temat) i wyślij.</span></label><label class="step"><input type="checkbox" data-step><span>Sprawdź źródła pod odpowiedzią — zaznacz, co wymaga weryfikacji.</span></label>
-<div class="prom"><div class="pbar"><span>Prompt — Szybki research</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Zrób szybki research na temat: <b>[TEMAT / PYTANIE]</b>.
-Podaj: 5 kluczowych faktów, 3 wnioski praktyczne dla mojej pracy i wskaż źródła.
+<div class="uses">🔧 <b>Narzędzie:</b> Perplexity — <a href="https://perplexity.ai" target="_blank">perplexity.ai</a> <span class="freetag">bezpłatne</span></div>
+<label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://perplexity.ai' target='_blank'>perplexity.ai</a> (działa też bez logowania).</span></label><label class="step"><input type="checkbox" data-step><span>Wklej prompt research i wpisz temat ze swojej branży (np. „trendy w pergolach ogrodowych 2026”, „czego szukają klienci pergoli w Google”).</span></label><label class="step"><input type="checkbox" data-step><span>Sprawdź źródła pod odpowiedzią — zaznacz, co wymaga weryfikacji.</span></label>
+<div class="prom"><div class="pbar"><span>Prompt — Szybki research</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Zrób szybki research na temat: <b>[TEMAT / PYTANIE — np. trendy w pergolach ogrodowych 2026]</b>.
+Podaj: 5 kluczowych faktów, 3 wnioski praktyczne dla mojej firmy i wskaż źródła.
 Zaznacz, co wymaga dodatkowej weryfikacji.</pre></div>
 <div class="sec">Ćwiczenie 4B · Analiza źródeł w NotebookLM</div>
-<label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://notebooklm.google.com' target='_blank'>notebooklm.google.com</a> (konto Google, bezpłatnie).</span></label><label class="step"><input type="checkbox" data-step><span>Kliknij <b>New</b> → dodaj źródło: wklej tekst (użyj przykładu poniżej) albo wgraj PDF/link.</span></label><label class="step"><input type="checkbox" data-step><span>Zadaj pytania do źródła — NotebookLM odpowiada wyłącznie na jego podstawie (mniej halucynacji).</span></label>
-<div class="prom ex"><div class="pbar"><span>📋 Przykładowe źródło — wklej do NotebookLM</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Notatka: Zmiana godzin wysyłki. Od 1 lipca paczki nadajemy do godz. 14:00 (wcześniej 12:00). Zamówienia po 14:00 realizujemy następnego dnia roboczego. W piątki ostatnia wysyłka o 12:00. Koszt InPost bez zmian: 12 zł. Dla zamówień powyżej 200 zł wysyłka gratis.</pre></div>
+<div class="uses">🔧 <b>Narzędzie:</b> NotebookLM — <a href="https://notebooklm.google.com" target="_blank">notebooklm.google.com</a> <span class="freetag">bezpłatne</span></div>
+<label class="step"><input type="checkbox" data-step><span>Wejdź na <a href='https://notebooklm.google.com' target='_blank'>notebooklm.google.com</a> (konto Google, bezpłatnie).</span></label><label class="step"><input type="checkbox" data-step><span>Kliknij <b>Nowy</b> (New) → dodaj źródło: wklej tekst (użyj przykładu poniżej) albo wgraj własny cennik/ofertę (PDF).</span></label><label class="step"><input type="checkbox" data-step><span>Zadaj pytania do źródła (np. „ile kosztuje pergola premium 4x3 m z LED?”) — NotebookLM odpowiada wyłącznie na podstawie źródła (mniej halucynacji).</span></label>
+<div class="prom ex"><div class="pbar"><span>📋 Przykładowe źródło — wklej do NotebookLM</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Cennik i oferta — pergole ogrodowe.
+- Model Standard (lamelowy dach): od 1200 zł/m².
+- Model Premium (czujnik deszczu + oświetlenie LED): od 1600 zł/m².
+- Ściany boczne szklane: +900 zł/szt. Zasłony ZIP: +1200 zł/szt.
+- Promocja wiosenna: -10% przy podpisaniu umowy do końca kwietnia.
+- Region montażu: do 100 km od siedziby. Dalej — dojazd wyceniany indywidualnie.
+- Czas realizacji w sezonie: 3–5 tygodni od podpisania umowy.
+- Gwarancja: 5 lat na konstrukcję, 2 lata na elektronikę.</pre></div>
 <div class="sec">Ćwiczenie 4C · Wsparcie decyzji i administracja</div>
-<label class="step"><input type="checkbox" data-step><span>Użyj promptu „Doradca” do realnego dylematu (albo przykładu poniżej).</span></label><label class="step"><input type="checkbox" data-step><span>Użyj promptu „Administracja”, aby wygenerować mail, plan tygodnia lub checklistę.</span></label>
-<div class="prom"><div class="pbar"><span>Prompt — Doradca (wsparcie decyzji)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jesteś doradcą. Mam decyzję: <b>[OPISZ DECYZJĘ / DYLEMAT]</b>.
+<div class="uses">🔧 <b>Narzędzie:</b> Gemini — <a href="https://gemini.google.com" target="_blank">gemini.google.com</a> <span class="freetag">bezpłatne</span></div>
+<label class="step"><input type="checkbox" data-step><span>Użyj promptu „Doradca” do realnego dylematu w firmie (albo przykładu poniżej).</span></label><label class="step"><input type="checkbox" data-step><span>Użyj promptu „Administracja”, aby wygenerować mail po pomiarze, plan tygodnia lub opis posta na Instagram.</span></label>
+<div class="prom"><div class="pbar"><span>Prompt — Doradca (wsparcie decyzji)</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Jesteś doradcą biznesowym. Mam decyzję: <b>[OPISZ DECYZJĘ / DYLEMAT]</b>.
 Przedstaw: argumenty ZA, argumenty PRZECIW, 3 główne ryzyka i rekomendację warunkową (co zrobić i pod jakim warunkiem). Bądź konkretny.</pre></div>
-<div class="prom"><div class="pbar"><span>Prompt — Administracja</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Przygotuj:
-1) szkic uprzejmego maila w sprawie <b>[TEMAT]</b>,
-2) plan mojego tygodnia na podstawie zadań: <b>[WKLEJ 5–7 ZADAŃ]</b>,
-3) checklistę do procesu: <b>[NAZWA PROCESU]</b>.
+<div class="prom"><div class="pbar"><span>Prompt — Administracja i treści</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Przygotuj:
+1) szkic uprzejmego maila do klienta po pomiarze pergoli (podziękowanie, wstępna wycena, następny krok),
+2) plan mojego tygodnia na podstawie zadań: <b>[WKLEJ 5–7 ZADAŃ, np. pomiary, montaże, telefony]</b>,
+3) pomysł na opis posta na Instagram o zrealizowanej pergoli (bez podawania cen, z zachętą do pomiaru).
 Po polsku, zwięźle, gotowe do użycia.</pre></div>
-<div class="prom ex"><div class="pbar"><span>📋 Przykładowy dylemat do promptu „Doradca”</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Czy wprowadzić darmową wysyłkę od 150 zł? Średnia wartość zamówienia to teraz 120 zł, marża ok. 40%, koszt wysyłki 12 zł. Chcę zwiększyć wartość koszyka, ale boję się o marżę.</pre></div>
+<div class="prom ex"><div class="pbar"><span>📋 Przykładowy dylemat do promptu „Doradca”</span><button class="pcopy" data-copy>Kopiuj</button></div><pre>Czy wprowadzić bezpłatny pomiar w promieniu 100 km? Dojazd kosztuje mnie czas i paliwo, ale klienci częściej decydują się po pomiarze na miejscu. Średnia wartość realizacji to ok. 25 000 zł.</pre></div>
 <div class="teo"><h3>Po dzisiejszym dniu wiesz i umiesz</h3><p>Podsumowanie Dnia 1:</p><ul><li>Wiesz, czym agent różni się od chatbota</li><li>Umiesz dobrać typ agenta do zadania</li><li>Masz Kartę Agenta, instrukcję systemową i działającego agenta w Gemini Gems</li><li><b>Jutro:</b> agenci w procesach firmy, integracje Make i Zapier, bezpieczeństwo oraz projekt końcowy. Do zobaczenia o 09:00!</li></ul></div>
 <div class="tgrid"><a class="tool" href="https://notebooklm.google.com" target="_blank"><b>NotebookLM<span class="freetag">bezpłatne</span></b><span class="tu">notebooklm.google.com</span><p>Analiza Twoich źródeł</p></a><a class="tool" href="https://perplexity.ai" target="_blank"><b>Perplexity<span class="freetag">bezpłatne</span></b><span class="tu">perplexity.ai</span><p>Research ze źródłami</p></a><a class="tool" href="https://gemini.google.com" target="_blank"><b>Gemini<span class="freetag">bezpłatne</span></b><span class="tu">gemini.google.com</span><p>Doradca, administracja</p></a><a class="tool" href="https://claude.ai" target="_blank"><b>Claude<span class="freetag">bezpłatne</span></b><span class="tu">claude.ai</span><p>Dłuższe analizy tekstu</p></a></div>
 <div class="notes"><textarea data-notes placeholder="Które narzędzie wdrożę u siebie w pierwszej kolejności: …"></textarea><div class="nh">Zapisuje się automatycznie. <span class="sv">✓ zapisano</span></div></div>
